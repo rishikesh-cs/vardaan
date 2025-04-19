@@ -28,12 +28,12 @@ export default function home() {
     name="twitter:description"
     content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
   />
-  <meta name="twitter:image" content="assets/images/social.html" />
+  <meta name="twitter:image" content="./images/social.html" />
   {/* Open Graph data */}
   <meta property="og:title" content="ArtTemplate" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="your url website" />
-  <meta property="og:image" content="assets/images/social.html" />
+  <meta property="og:image" content="./images/social.html" />
   <meta
     property="og:description"
     content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
@@ -43,37 +43,37 @@ export default function home() {
   <link
     rel="apple-touch-icon"
     sizes="144x144"
-    href="assets/images/favicons/apple-touch-icon-144x144.png"
+    href="./images/favicons/apple-touch-icon-144x144.png"
   />
   <link
     rel="apple-touch-icon"
     sizes="114x114"
-    href="assets/images/favicons/apple-touch-icon-114x114.png"
+    href="./images/favicons/apple-touch-icon-114x114.png"
   />
   <link
     rel="apple-touch-icon"
     sizes="72x72"
-    href="assets/images/favicons/apple-touch-icon-72x72.png"
+    href="./images/favicons/apple-touch-icon-72x72.png"
   />
   <link
     rel="apple-touch-icon"
     sizes="57x57"
-    href="assets/images/favicons/apple-touch-icon-57x57.png"
+    href="./images/favicons/apple-touch-icon-57x57.png"
   />
   <link
     rel="shortcut icon"
-    href="assets/images/favicons/favicon.png"
+    href="./images/favicons/favicon.png"
     type="image/png"
   />
   {/* Styles */}
-  <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
-  <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  <link rel="stylesheet" type="text/css" href="./demo/style-demo.css" />
   {/* Preloader */}
   <div className="preloader">
     <div className="preloader__wrap">
       <img
         className="preloader__logo"
-        src="assets/images/logotype.svg"
+        src="./images/logotype.svg"
         alt="ARCDECO"
       />
       <div className="preloader__progress">
@@ -87,7 +87,7 @@ export default function home() {
       <a className="logo-link magnetic" href="index.html">
         <img
           className="logotype"
-          src="assets/images/logotype.svg"
+          src="./images/logotype.svg"
           alt="ARCDECO"
         />
       </a>
@@ -133,7 +133,7 @@ export default function home() {
       {/* Main image */}
       <img
         className="hero__image cover js-scale js-parallax"
-        src="assets/img/slider_image_08.jpg"
+        src="./img/slider_image_08.jpg"
         alt=""
       />
     </header>
@@ -172,7 +172,7 @@ export default function home() {
             <div className="gallery__item reveal-box">
               <img
                 className="cover lazyload"
-                src="assets/img/about_04.jpg"
+                src="./img/about_04.jpg"
                 alt=""
               />
               <span className="reveal-overlay" />
@@ -180,7 +180,7 @@ export default function home() {
             <div className="gallery__item reveal-box">
               <img
                 className="cover lazyload"
-                src="assets/img/about_03.jpg"
+                src="./img/about_03.jpg"
                 alt=""
               />
               <span className="reveal-overlay" />
@@ -217,7 +217,7 @@ export default function home() {
             <a href="project_single.html">
               <img
                 className="cover lazyload"
-                src="assets/img/image_news_06.jpg"
+                src="./img/image_news_06.jpg"
                 alt=""
               />
             </a>
@@ -231,7 +231,7 @@ export default function home() {
             <a href="project_single.html">
               <img
                 className="cover lazyload"
-                src="assets/img/image_project_13.jpg"
+                src="./img/image_project_13.jpg"
                 alt=""
               />
             </a>
@@ -245,7 +245,7 @@ export default function home() {
             <a href="project_single.html">
               <img
                 className="cover lazyload"
-                src="assets/img/slider_image_09.jpg"
+                src="./img/slider_image_09.jpg"
                 alt=""
               />
             </a>
@@ -259,7 +259,7 @@ export default function home() {
             <a href="project_single.html">
               <img
                 className="cover lazyload"
-                src="assets/img/slider_image_04.jpg"
+                src="./img/slider_image_04.jpg"
                 alt=""
               />
             </a>
@@ -294,7 +294,7 @@ export default function home() {
       <div className="services__item overlay--45">
         <div
           className="services__item-bg js-image"
-          data-image="assets/img/services_01.jpg"
+          data-image="./img/services_01.jpg"
         />
         <div className="services__item-details">
           <h4 className="title title--h3 js-lines">Interior</h4>
@@ -308,7 +308,7 @@ export default function home() {
       <div className="services__item overlay--45">
         <div
           className="services__item-bg js-image"
-          data-image="assets/img/services_02.jpg"
+          data-image="./img/services_02.jpg"
         />
         <div className="services__item-details">
           <h4 className="title title--h3 js-lines">Architecture</h4>
@@ -322,7 +322,7 @@ export default function home() {
       <div className="services__item overlay--45">
         <div
           className="services__item-bg js-image"
-          data-image="assets/img/services_03.jpg"
+          data-image="./img/services_03.jpg"
         />
         <div className="services__item-details">
           <h4 className="title title--h3 js-lines">Landscape</h4>
@@ -337,34 +337,34 @@ export default function home() {
     <div className="container-fully section-about">
       <div className="brand-grid">
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-01.svg" alt="" />
+          <img src="./img/brand-01.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-02.svg" alt="" />
+          <img src="./img/brand-02.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-03.svg" alt="" />
+          <img src="./img/brand-03.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-04.svg" alt="" />
+          <img src="./img/brand-04.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-05.svg" alt="" />
+          <img src="./img/brand-05.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-06.svg" alt="" />
+          <img src="./img/brand-06.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-07.svg" alt="" />
+          <img src="./img/brand-07.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-08.svg" alt="" />
+          <img src="./img/brand-08.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-09.svg" alt="" />
+          <img src="./img/brand-09.svg" alt="" />
         </div>
         <div className="brand-grid__item js-scroll-show">
-          <img src="assets/img/brand-10.svg" alt="" />
+          <img src="./img/brand-10.svg" alt="" />
         </div>
       </div>
     </div>
