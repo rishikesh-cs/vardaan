@@ -1,0 +1,414 @@
+/* ------------------------------------------------
+ Author: ArtStyles (Art)
+ 
+ Template Name: 
+ version: 1.0.3
+------------------------------------------------ */
+/* -----------------------------------------------------------------
+    - General Styles
+----------------------------------------------------------------- */
+body {
+  background-color: #fff;
+  color: #19191B;
+}
+
+.input, .textarea, select,
+.custom-select {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(25, 25, 27, 0.2);
+  color: #19191B;
+}
+
+.input:focus, .textarea:focus, select:focus,
+.custom-select:focus {
+  border-bottom: 1px solid #19191B;
+  color: #19191B;
+}
+
+.custom-control-label::before {
+  background-color: transparent;
+  border: 1px solid rgba(25, 25, 27, 0.2);
+}
+
+select,
+.custom-select {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%2319191B' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.1rem center/10px 16px;
+}
+
+.with-errors {
+  color: #ff5f53;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #19191B;
+}
+
+.form-control::-moz-placeholder {
+  color: #19191B;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #19191B;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #19191B;
+}
+
+.form-control::placeholder {
+  color: #19191B;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #19191B !important;
+}
+
+input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+  background-color: #19191B;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+}
+
+.touch .btn:hover, .touch .btn:focus {
+  color: #fff;
+}
+
+.table span {
+  color: #686868;
+}
+
+/* -----------------------------------------------------------------
+    - Typography
+----------------------------------------------------------------- */
+.title--separation::before, .title--separation-center::before {
+  background-color: #19191B;
+}
+
+.block-quote::before {
+  background-image: url(../images/icon-quote-black.svg);
+}
+.block-quote cite::before {
+  background-color: #19191B;
+}
+
+.description {
+  color: #19191B;
+}
+
+.foreword {
+  color: #19191B;
+}
+
+.text-rotate {
+  color: rgba(104, 104, 104, 0.3);
+}
+
+iframe {
+  background-color: #C4C4C4;
+}
+
+::-moz-selection {
+  background: transparent;
+  color: #FFB951;
+}
+
+::selection {
+  background: transparent;
+  color: #FFB951;
+}
+
+/* -----------------------------------------------------------------
+    - Preloader
+----------------------------------------------------------------- */
+.preloader {
+  background-color: #19191B;
+}
+.preloader__progress {
+  background: rgba(104, 104, 104, 0.3);
+}
+.preloader__progress span {
+  background: #FFB951;
+}
+
+/* -----------------------------------------------------------------
+    - Header
+----------------------------------------------------------------- */
+.navbar-change.navbar--white .nav__link {
+  color: #fff;
+}
+
+.nav__link {
+  color: #19191B;
+}
+@media only screen and (max-width: 768px) {
+  .nav-2 .nav__link:hover {
+    color: #FFB951;
+  }
+}
+.nav .dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.nav .dropdown-menu::before {
+  border-bottom: 6px solid #fff;
+}
+@media only screen and (max-width: 768px) {
+  .nav .dropdown-menu {
+    background-color: #19191B;
+  }
+}
+.nav .dropdown .nav-item:hover {
+  background-color: #FFB951;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .nav .dropdown .nav-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .nav .dropdown .nav-item:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+.nav .dropdown .nav-item a {
+  color: #19191B;
+}
+@media only screen and (max-width: 768px) {
+  .nav .dropdown .nav-item a {
+    color: #fff;
+  }
+}
+.nav .dropdown .nav-item:hover a {
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .nav .dropdown .nav-item:hover a {
+    color: #FFB951;
+  }
+}
+
+.hamburger__inner:before, .hamburger__inner:after {
+  background-color: #19191B;
+}
+.hamburger.is-active .hamburger__inner:before, .hamburger.is-active .hamburger__inner:after {
+  background-color: #fff;
+}
+
+.navbar-change.navbar--white .hamburger__inner:before, .navbar-change.navbar--white .hamburger__inner:after {
+  background-color: #fff;
+}
+
+.is-sideNav.is-active .hamburger__inner:before, .is-sideNav.is-active .hamburger__inner:after {
+  background-color: #19191B;
+}
+
+.nav-overlay__bg {
+  background: #19191B;
+}
+.nav-overlay__menu-item a {
+  color: rgba(104, 104, 104, 0.5);
+}
+.nav-overlay__menu-item a::before {
+  color: #fff;
+}
+
+.sideNav {
+  background-color: #fff;
+}
+.sideNav__item {
+  color: #19191B;
+}
+.sideNav__item a {
+  color: #19191B;
+}
+.sideNav__sub .sideNav__item a {
+  color: #19191B;
+}
+
+/* -----------------------------------------------------------------
+    - Shared
+----------------------------------------------------------------- */
+.hero__header {
+  color: #fff;
+}
+
+.list-row__item {
+  border-bottom: 1px solid rgba(104, 104, 104, 0.2);
+}
+.list-row__col-num {
+  color: #C4C4C4;
+}
+
+.note {
+  background: #fff;
+}
+.note::before {
+  background: #fff;
+}
+.note .title {
+  color: #19191B;
+}
+
+.services__item {
+  background-color: #fff;
+}
+.services__item-details .title {
+  color: #fff;
+}
+
+/* -----------------------------------------------------------------
+    - Slider
+----------------------------------------------------------------- */
+.slider .slider__caption .title--separation::before {
+  background-color: #FFB951;
+}
+.slider .slider__caption .description {
+  color: #fff;
+}
+.slider-pagination-progressbar.progressbar--black {
+  background: rgba(25, 25, 27, 0.2);
+}
+.slider-pagination-progressbar.progressbar--black .swiper-pagination-progressbar-fill {
+  background: #19191B !important;
+}
+.slider-pagination-fraction {
+  color: #fff;
+}
+
+.item-caption {
+  color: #fff;
+}
+
+/* -----------------------------------------------------------------
+    - Portfolio
+----------------------------------------------------------------- */
+.content-grid__link:hover .content-grid__description {
+  color: #19191B;
+}
+.content-grid .title {
+  color: #19191B;
+}
+.content-grid__description, .content-grid__role {
+  color: #19191B;
+}
+.content-grid__role {
+  color: #686868;
+}
+
+@media only screen and (min-width: 769px) {
+  .filter__link {
+    color: #19191B;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .select {
+    color: #19191B;
+  }
+  .select .placeholder {
+    background-color: #fff;
+  }
+}
+/* -----------------------------------------------------------------
+    - Project Single
+----------------------------------------------------------------- */
+.project-footer {
+  background-color: rgba(196, 196, 196, 0.1);
+}
+.project-footer::before {
+  background-color: rgba(196, 196, 196, 0.3);
+}
+.project-footer__link {
+  color: #19191B;
+}
+.project-footer__link:hover {
+  color: #FFB951;
+}
+
+/* -----------------------------------------------------------------
+    - News
+----------------------------------------------------------------- */
+.item-post-horizon:hover .item-post-horizon__image-wrap::before {
+  box-shadow: inset 0px 0px 0px 10px #fff;
+}
+.item-post-horizon__image-wrap::before {
+  box-shadow: inset 0px 0px 0px 0px #fff;
+}
+.item-post-horizon__description {
+  color: #19191B;
+}
+
+.post-details {
+  color: #686868;
+}
+
+/* -----------------------------------------------------------------
+    - Single post
+----------------------------------------------------------------- */
+.post-footer .btn-link {
+  color: #FFB951;
+}
+.post-footer .btn-link::before {
+  background-color: #FFB951;
+}
+.post-footer .social__link {
+  color: #19191B;
+}
+.post-footer .social__link:hover {
+  color: #FFB951;
+}
+
+.comment-box__body {
+  color: #19191B;
+}
+.comment-box__details {
+  color: #686868;
+}
+
+/* -----------------------------------------------------------------
+    - Footer
+----------------------------------------------------------------- */
+.footer {
+  color: #19191B;
+}
+.footer::before {
+  background-color: #19191B;
+}
+.footer__social a {
+  color: #19191B;
+}
+
+/* -----------------------------------------------------------------
+    - Other
+----------------------------------------------------------------- */
+.back-to-top {
+  background-image: url(../images/arrow-scroll-to-black.svg);
+}
+
+.cursor {
+  background-color: #FFB951;
+}
+
+.node {
+  border: 1px solid rgba(255, 185, 81, 0.3);
+}
+.node.expand {
+  background-color: rgba(255, 185, 81, 0.2);
+}
+.node.drag::before, .node.drag::after {
+  color: #FFB951;
+}
+
+.medium-zoom-overlay {
+  background: #fff !important;
+}
+
+.reveal-overlay {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style-light.css.map */
