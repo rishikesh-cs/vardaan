@@ -1,7 +1,31 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom'
+import Navbar from './Navbar'
 
 export default function Home() {
+
+  useEffect(() => {
+          const script = document.createElement('script');
+          script.src = '/js/common.js'; // path relative to public/
+          script.async = true;
+      
+          script.onload = () => {
+            if (typeof window.anime === 'function') {
+              window.anime(); // Call the function
+            } else {
+              console.error("anime is not defined");
+            }
+          };
+      
+          document.body.appendChild(script);
+      
+          // Cleanup
+          return () => {
+            document.body.removeChild(script);
+          };
+      });
+
   return (
     <>
       <>
@@ -85,13 +109,15 @@ export default function Home() {
         {/* Top */}
         <nav className="navbar navbar-compact">
           <div className="mr-auto">
-            <a className="logo-link magnetic" href="index.html">
+            {/* <a className="logo-link magnetic" href="index.html"> */}
+            <Link className="logo-link magnetic" to=''>
               <img
                 className="logotype"
                 src="./images/logotype.svg"
                 alt="ARCDECO"
               />
-            </a>
+            </Link>
+            {/* </a> */}
           </div>
           <div className="ml-sm-auto">
             <button className="hamburger zoom-cursor magnetic" type="button">
@@ -185,9 +211,11 @@ export default function Home() {
                       alt=""
                     />
                     <span className="reveal-overlay" />
-                    <a href="about.html" className="btn-link js-scroll-show">
+                    {/* <a href="about.html" className="btn-link js-scroll-show">
                       Go to About
-                    </a>
+                    </a> */}
+
+                    <Link to='/about'>Go to About</Link>
                   </div>
                 </div>
               </div>
@@ -396,18 +424,19 @@ export default function Home() {
           </footer>
           {/* /Footer */}
         </main>
+        <Navbar />
         {/* Overlay nav */}
-        <div className="nav-overlay">
+        {/* <div className="nav-overlay">
           <div className="nav-overlay__bg" />
           <div className="nav-overlay__container">
             <ul className="nav-overlay__menu">
               <li className="nav-overlay__menu-item">
                 <span>01</span>
-                <Link to='/portfolio'>Portfolio.</Link>
+                <Link to='/portfolio'>Portfolio.</Link> */}
                 {/* <a data-text="Portfolio." href="portfolio_grid.html">
                   Portfolio.
                 </a> */}
-              </li>
+              {/* </li>
               <li className="nav-overlay__menu-item">
                 <span>02</span>
                 <a data-text="Blog." href="blog.html">
@@ -415,11 +444,12 @@ export default function Home() {
                 </a>
               </li>
               <li className="nav-overlay__menu-item">
-                <span>03</span>
-                <a data-text="About us." href="about.html">
+                <span>03</span> */}
+                {/* <a data-text="About us." href="about.html">
                   About us.
-                </a>
-              </li>
+                </a> */}
+                <Link to='/about'>About Us.</Link>
+              {/* </li>
               <li className="nav-overlay__menu-item">
                 <span>04</span>
                 <a data-text="Contacts." href="contact.html">
@@ -428,10 +458,10 @@ export default function Home() {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
         {/* /Overlay nav */}
         {/* Demo Menu */}
-        <div className="btnSlideNav slideOpen" />
+        {/* <div className="btnSlideNav slideOpen" />
         <div className="btnSlideNav slideClose" />
         <ul className="slideNav">
           <li className="slideNav__item">
@@ -486,7 +516,7 @@ export default function Home() {
             <a href="404.html">16. Error 404</a>
           </li>
         </ul>
-        <div className="overlay-slideNav" />
+        <div className="overlay-slideNav" /> */}
         {/* Demo Menu */}
         {/* Cursor */}
         <div className="node" id="node" />

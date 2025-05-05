@@ -43,59 +43,60 @@ $(document).ready(function() {
 	    preloader(); //Init preloader
     });
 
-    function preloader() {
-        var tl = anime.timeline({
-            complete: function(anim) {
-                $('body').removeClass('no-scroll');
-            }    
-        });
+    
+    // function preloader() {
+    //     var tl = anime.timeline({
+    //         complete: function(anim) {
+    //             $('body').removeClass('no-scroll');
+    //         }    
+    //     });
            
-        tl
-        .add({
-            targets: 'body',
-            duration: 1,
-            update: function() {
-                //$('body').addClass('no-scroll');
-            }
-        })
-        .add({
-            targets: '.preloader',
-            duration: 1,
-            //translateX: 0,
-            opacity: 1
-        })
-        .add({
-            targets: '.preloader__logo',
-            duration: 1200,
-            webkitFilter: 'blur(0)',
-            scale: 1,
-            opacity: 1,
-            easing: 'easeInOutQuart'
-        })
-        .add({
-            targets: '.preloader__progress span',
-            duration: 1000,
-            width: '100%',
-			easing: 'easeInOutQuart'
-        },'-=500')
-        .add({
-            targets: '.preloader',
-			delay: 1,
-            opacity: 0,
-            //translateX: '100%',
-            //skewX: 15,
-			//transformOrigin: 'top left',
-			zIndex: '-1',
-            easing: 'easeInOutQuart'
-		})
-        .add({
-            targets: '.preloader__wrap',
-            duration: 1000,
-            translateY: '30px',
-            opacity: 0,
-            easing: 'easeInOutQuart'
-        },'-=1500');
-    };
+    //     tl
+    //     .add({
+    //         targets: 'body',
+    //         duration: 1,
+    //         update: function() {
+    //             //$('body').addClass('no-scroll');
+    //         }
+    //     })
+    //     .add({
+    //         targets: '.preloader',
+    //         duration: 1,
+    //         //translateX: 0,
+    //         opacity: 1
+    //     })
+    //     .add({
+    //         targets: '.preloader__logo',
+    //         duration: 1200,
+    //         webkitFilter: 'blur(0)',
+    //         scale: 1,
+    //         opacity: 1,
+    //         easing: 'easeInOutQuart'
+    //     })
+    //     .add({
+    //         targets: '.preloader__progress span',
+    //         duration: 1000,
+    //         width: '100%',
+	// 		easing: 'easeInOutQuart'
+    //     },'-=500')
+    //     .add({
+    //         targets: '.preloader',
+	// 		delay: 1,
+    //         opacity: 0,
+    //         //translateX: '100%',
+    //         //skewX: 15,
+	// 		//transformOrigin: 'top left',
+	// 		zIndex: '-1',
+    //         easing: 'easeInOutQuart'
+	// 	})
+    //     .add({
+    //         targets: '.preloader__wrap',
+    //         duration: 1000,
+    //         translateY: '30px',
+    //         opacity: 0,
+    //         easing: 'easeInOutQuart'
+    //     },'-=1500');
+    // };
  
     /*-----------------------------------------------------------------
       03. Smooth scroll
@@ -249,119 +250,119 @@ $(document).ready(function() {
       07. Cursor
     -------------------------------------------------------------------*/
     
-    var cursor = {
-        delay: 8,
-        _x: 0,
-        _y: 0,
-        endX: (window.innerWidth / 2),
-        endY: (window.innerHeight / 2),
-        cursorVisible: true,
-        cursorEnlarged: false,
-        $cursor: document.querySelector('.cursor'),
-        $node: document.querySelector('.node'),
+    // var cursor = {
+    //     delay: 8,
+    //     _x: 0,
+    //     _y: 0,
+    //     endX: (window.innerWidth / 2),
+    //     endY: (window.innerHeight / 2),
+    //     cursorVisible: true,
+    //     cursorEnlarged: false,
+    //     $cursor: document.querySelector('.cursor'),
+    //     $node: document.querySelector('.node'),
 		
-        init: function() {
-			$('body').css('cursor', 'none');
+    //     init: function() {
+	// 		$('body').css('cursor', 'none');
 			
-            // Set up element sizes
-            this.cursorSize = this.$cursor.offsetWidth;
-            this.nodeSize = this.$node.offsetWidth;
+    //         // Set up element sizes
+    //         this.cursorSize = this.$cursor.offsetWidth;
+    //         this.nodeSize = this.$node.offsetWidth;
         
-            this.setupEventListeners();
-            this.animateDotOutline();
-			this.cursorDrag();
-        },
+    //         this.setupEventListeners();
+    //         this.animateDotOutline();
+	// 		this.cursorDrag();
+    //     },
     
-        setupEventListeners: function() {
-            var self = this;
+    //     setupEventListeners: function() {
+    //         var self = this;
         
-            // Anchor hovering
-			Array.prototype.slice.call(document.querySelectorAll('a, button, .zoom-cursor')).forEach(function (el) {
-                el.addEventListener('mouseover', function() {
-                    self.cursorEnlarged = true;
-                    self.toggleCursorSize();
-                });
-                el.addEventListener('mouseout', function() {
-                    self.cursorEnlarged = false;
-                    self.toggleCursorSize();
-                });
-            });
+    //         // Anchor hovering
+	// 		Array.prototype.slice.call(document.querySelectorAll('a, button, .zoom-cursor')).forEach(function (el) {
+    //             el.addEventListener('mouseover', function() {
+    //                 self.cursorEnlarged = true;
+    //                 self.toggleCursorSize();
+    //             });
+    //             el.addEventListener('mouseout', function() {
+    //                 self.cursorEnlarged = false;
+    //                 self.toggleCursorSize();
+    //             });
+    //         });
 
-            document.addEventListener('mousemove', function(e) {
-                // Show the cursor
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
+    //         document.addEventListener('mousemove', function(e) {
+    //             // Show the cursor
+    //             self.cursorVisible = true;
+    //             self.toggleCursorVisibility();
 
-                // Position the dot
-                self.endX = e.clientX;
-                self.endY = e.clientY;
-                self.$cursor.style.top = self.endY + 'px';
-                self.$cursor.style.left = self.endX + 'px';
-            });
+    //             // Position the dot
+    //             self.endX = e.clientX;
+    //             self.endY = e.clientY;
+    //             self.$cursor.style.top = self.endY + 'px';
+    //             self.$cursor.style.left = self.endX + 'px';
+    //         });
         
-            // Hide/show cursor
-            document.addEventListener('mouseenter', function(e) {
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
-                self.$cursor.style.opacity = 1;
-                self.$node.style.opacity = 1;
-            });
+    //         // Hide/show cursor
+    //         document.addEventListener('mouseenter', function(e) {
+    //             self.cursorVisible = true;
+    //             self.toggleCursorVisibility();
+    //             self.$cursor.style.opacity = 1;
+    //             self.$node.style.opacity = 1;
+    //         });
         
-            document.addEventListener('mouseleave', function(e) {
-                self.cursorVisible = true;
-                self.toggleCursorVisibility();
-                self.$cursor.style.opacity = 0;
-                self.$node.style.opacity = 0;
-            });			
-        },
+    //         document.addEventListener('mouseleave', function(e) {
+    //             self.cursorVisible = true;
+    //             self.toggleCursorVisibility();
+    //             self.$cursor.style.opacity = 0;
+    //             self.$node.style.opacity = 0;
+    //         });			
+    //     },
     
-        animateDotOutline: function() {
-            var self = this;
+    //     animateDotOutline: function() {
+    //         var self = this;
         
-            self._x += (self.endX - self._x) / self.delay;
-            self._y += (self.endY - self._y) / self.delay;
-            self.$node.style.top = self._y + 'px';
-            self.$node.style.left = self._x + 'px';
+    //         self._x += (self.endX - self._x) / self.delay;
+    //         self._y += (self.endY - self._y) / self.delay;
+    //         self.$node.style.top = self._y + 'px';
+    //         self.$node.style.left = self._x + 'px';
         
-            requestAnimationFrame(this.animateDotOutline.bind(self));
-        },
+    //         requestAnimationFrame(this.animateDotOutline.bind(self));
+    //     },
     
-        toggleCursorSize: function() {
-            var self = this;
+    //     toggleCursorSize: function() {
+    //         var self = this;
         
-            if (self.cursorEnlarged) {
-                self.$node.classList.add('expand');
-            } else {
-                self.$node.classList.remove('expand');
-            }
-        },
+    //         if (self.cursorEnlarged) {
+    //             self.$node.classList.add('expand');
+    //         } else {
+    //             self.$node.classList.remove('expand');
+    //         }
+    //     },
     
-        toggleCursorVisibility: function() {
-            var self = this;
+    //     toggleCursorVisibility: function() {
+    //         var self = this;
         
-            if (self.cursorVisible) {
-                self.$cursor.style.opacity = 1;
-                self.$node.style.opacity = 1;
-            } else {
-                self.$cursor.style.opacity = 0;
-                self.$node.style.opacity = 0;
-            }
-        },
+    //         if (self.cursorVisible) {
+    //             self.$cursor.style.opacity = 1;
+    //             self.$node.style.opacity = 1;
+    //         } else {
+    //             self.$cursor.style.opacity = 0;
+    //             self.$node.style.opacity = 0;
+    //         }
+    //     },
 		
-		cursorDrag: function() {
-			var self = this;
-			$('.cursorDrag').on('mouseenter', function(){
-				self.$node.classList.add('drag', 'expand');
-			});
-			$('.cursorDrag').on('mouseleave', function(){
-				self.$node.classList.remove('drag', 'expand');
-			});
-		}
-    }
+	// 	cursorDrag: function() {
+	// 		var self = this;
+	// 		$('.cursorDrag').on('mouseenter', function(){
+	// 			self.$node.classList.add('drag', 'expand');
+	// 		});
+	// 		$('.cursorDrag').on('mouseleave', function(){
+	// 			self.$node.classList.remove('drag', 'expand');
+	// 		});
+	// 	}
+    // }
 
-	if (!isMobile) {
-        cursor.init(); //Init custom cursor
-	}
+	// if (!isMobile) {
+    //     cursor.init(); //Init custom cursor
+	// }
 
     /*-----------------------------------------------------------------
       08. Magnetic

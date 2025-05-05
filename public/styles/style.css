@@ -966,7 +966,7 @@ iframe {
 }
 
 .open {
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .open .scrollUp {
   transform: translateY(0);
