@@ -2,30 +2,85 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import { db } from '../firebase';
+import { deleteDoc, doc } from 'firebase/firestore';
+import { storage } from '../firebase';
+import { ref, getDownloadURL, deleteObject, listAll } from 'firebase/storage';
+import './Portfolio.css';
 
 export default function Portfolio() {
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = '/js/common.js'; // path relative to public/
-        script.async = true;
+    const [selectedImage, setSelectedImage] = useState(null);
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '/js/common.js'; // path relative to public/
+    script.async = true;
 
-        script.onload = () => {
-            if (typeof window.anime === 'function') {
-                window.anime(); // Call the function
-            } else {
-                console.error("anime is not defined");
-            }
-        };
+    script.onload = () => {
+        if (typeof window.anime === 'function') {
+            window.anime(); // Call the function
+        } else {
+            console.error("anime is not defined");
+        }
+    };
 
-        document.body.appendChild(script);
+    document.body.appendChild(script);
+    fetchImages();
+    // Cleanup
+    return () => {
+        document.body.removeChild(script);
+    };
+   
+}, []);
+  const fetchImages = async () => {
+    // try {
+    //   const snapshot = await getDocs(collection(db, '/images'));
+    
+    //   const fetchedImages = snapshot.docs.map(doc => ({
+    //     id: doc.id,
+    //     ...doc.data()
+    //   }));
+    //   console.log(fetchedImages);
+    //   setImages(fetchedImages);
+    // } catch (error) {
+    //   console.error('Error fetching images:', error);
+    //   alert('Error loading images.');
+    // }
+    listAll(ref(storage,"images")).then(imgs=>{
+      console.log(imgs)
+      imgs.items.forEach(val=>{
+          getDownloadURL(val).then(url=>{
+              setImages(data=>[...data,url])
+          })
+      })
+  })
+  };
 
-        // Cleanup
-        return () => {
-            document.body.removeChild(script);
-        };
-    });
+  const handleDelete = async (id, imageUrl) => {
+    if (!window.confirm('Are you sure you want to delete this image?')) return;
 
+    try {
+      // Extract the image path from URL
+      const baseUrl = 'https://firebasestorage.googleapis.com/v0/b/';
+      const bucket = import.meta.env.VITE_FIREBASE_STORAGE_BUCKET;
+      const prefix = `${baseUrl}${bucket}/o/`;
+      const path = decodeURIComponent(imageUrl.replace(prefix, '').split('?')[0]);
+
+      const imageRef = ref(storage, path);
+      await deleteObject(imageRef);
+      await deleteDoc(doc(db, 'images', id));
+
+      setImages(images.filter((img) => img.id !== id));
+      console.log(images)
+    } catch (error) {
+      console.error('Error deleting image:', error);
+      alert('Failed to delete image.');
+    }
+  };
+//   useEffect(() => {
+   
+//   }, []);
 
     return (
         <>
@@ -70,9 +125,29 @@ export default function Portfolio() {
             <main className="js-scroll">
                 <div className="container-fully">
                     <header className="header-page">
-                        <h1 className="title title--h1 js-lines">Portfolio</h1>
+                        <h1 className="title portfoliotitle title--h1 js-lines">Portfolio</h1>
+
+                        <div className="containerport">
+                             {images.map(img => (
+                        <img  className='portimg'  key={img.id} src={img} alt="Herd of horses" data-toggle="modal" data-target="#exampleModal"  onClick={() => setSelectedImage(img)}/>
+                           
+                              ))}
+                          </div>
+
+
+                          {selectedImage && (
+        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelectedImage(null)}>
+              &times;
+            </button>
+            <img src={selectedImage} alt="Enlarged" className="modal-image" />
+          </div>
+        </div>
+      )}
+
                         {/* Filter */}
-                        <div className="select js-down-done">
+                        {/* <div className="select js-down-done">
                             <span className="placeholder">Select category</span>
                             <ul className="filter">
                                 <li className="filter__item">Category</li>
@@ -103,12 +178,16 @@ export default function Portfolio() {
                                 </li>
                             </ul>
                             <input type="hidden" name="changemetoo" />
-                        </div>
+                        </div> */}
                     </header>
-                    <div className="content-grid project-masonry filter-container">
-                        <div className="gutter-sizer" />
-                        {/* Item 1 */}
-                        <figure className="content-grid__item onHover category-modern">
+                  </div>
+
+
+                    {/* <div className="content-grid project-masonry filter-container">
+                        <div className="gutter-sizer" /> */}
+                      
+                        {/* {images.map(img => (
+                        <figure key={img.id} className="content-grid__item onHover category-modern">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -116,22 +195,22 @@ export default function Portfolio() {
                                 <picture className="content-grid__image-wrap image-wrap-fit js-zooming">
                                     <img
                                         className="cover content-grid__image lazyload"
-                                        src="./img/image_project_07.jpg"
-                                        alt="Project"
+                                        src={img}
+                                        alt={img.title}
                                     />
                                 </picture>
                                 <div className="content-grid__caption">
-                                    <h2 className="title title--h5">Modern Townhouse</h2>
+                                    <h2 className="title title--h5">  {img.id}</h2>
                                     <p className="content-grid__description">
-                                        There are two things that make a room timeless: a sense of
-                                        history and a piece of the future.
+                                  
                                     </p>
                                 </div>
                             </a>
                         </figure>
-                        {/* /Item 1 */}
+                        ))} */}
+                
                         {/* Item 2 */}
-                        <figure className="content-grid__item onHover category-minimalist">
+                        {/* <figure className="content-grid__item onHover category-minimalist">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -151,10 +230,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 2 */}
                         {/* Item 3 */}
-                        <figure className="content-grid__item onHover category-scandinavian">
+                        {/* <figure className="content-grid__item onHover category-scandinavian">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -174,10 +253,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 3 */}
                         {/* Item 4 */}
-                        <figure className="content-grid__item onHover category-industrial">
+                        {/* <figure className="content-grid__item onHover category-industrial">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -197,10 +276,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 4 */}
                         {/* Item 5 */}
-                        <figure className="content-grid__item onHover category-modern">
+                        {/* <figure className="content-grid__item onHover category-modern">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -220,10 +299,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 5 */}
                         {/* Item 6 */}
-                        <figure className="content-grid__item onHover category-minimalist">
+                        {/* <figure className="content-grid__item onHover category-minimalist">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -243,10 +322,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 6 */}
                         {/* Item 7 */}
-                        <figure className="content-grid__item onHover category-scandinavian">
+                        {/* <figure className="content-grid__item onHover category-scandinavian">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -266,10 +345,10 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 7 */}
                         {/* Item 8 */}
-                        <figure className="content-grid__item onHover category-industrial">
+                        {/* <figure className="content-grid__item onHover category-industrial">
                             <a
                                 className="content-grid__link js-scroll-show"
                                 href="project_single.html"
@@ -289,12 +368,14 @@ export default function Portfolio() {
                                     </p>
                                 </div>
                             </a>
-                        </figure>
+                        </figure> */}
                         {/* /Item 8 */}
-                    </div>
-                </div>
+                    {/* </div> */}
+                
+             
+           
                 {/* Footer */}
-                <footer className="footer footer-fully js-scroll-show">
+                {/* <footer className="footer footer-fully js-scroll-show">
                     <ul className="footer__contacts list-unstyled">
                         <li>Phone: +1 (00) 123-45-67</li>
                         <li>Email: hello@acrdeco.com</li>
@@ -313,7 +394,7 @@ export default function Portfolio() {
                     </div>
                 </footer>
                 {/* /Footer */}
-            </main>
+            </main> 
             <Navbar />
             {/* Overlay nav */}
             {/* <div className="nav-overlay">
