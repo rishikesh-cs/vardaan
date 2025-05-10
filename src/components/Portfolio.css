@@ -18,33 +18,34 @@
 .portimg {
     width: 450px;
     height: 300px;
-    margin: 10px;
-    border: 10px solid #fefae0;
+    margin: 35px;
+    /* border: 5px solid #fefae0; */
     filter: black(100%);
     transition-duration: 1s;
 }
 
 .portimg:hover {
-    border: 5px solid #FFB951;
+    /* border: 2px solid #b459cf; */
     transform: scale(1.1);
     filter: none;
 }
 
-footer {
+/* footer {
     background-color: #bc6c25;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     min-width: 100vw;
-}
+} */
 .containerport {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 50px
-}.image-gallery-container {
+}
+.image-gallery-container {
     padding: 20px;
     font-family: sans-serif;
   }

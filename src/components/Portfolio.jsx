@@ -7,6 +7,7 @@ import { deleteDoc, doc } from 'firebase/firestore';
 import { storage } from '../firebase';
 import { ref, getDownloadURL, deleteObject, listAll } from 'firebase/storage';
 import './Portfolio.css';
+import Footer from './Footer';
 
 export default function Portfolio() {
 
@@ -89,7 +90,7 @@ export default function Portfolio() {
                 <div className="preloader__wrap">
                     <img
                         className="preloader__logo"
-                        src="./images/logotype.svg"
+                      src="./img/logo2.png"
                         alt="VARDAAN INTERIORS"
                     />
                     <div className="preloader__progress">
@@ -110,7 +111,7 @@ export default function Portfolio() {
                     <Link className="logo-link magnetic" to='/'>
                         <img
                             className="logotype"
-                            src="./images/logotype.svg"
+                            src="./img/logo5.png"
                             alt="ARCDECO"
                         />
                     </Link>
@@ -136,15 +137,15 @@ export default function Portfolio() {
 
 
                           {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedImage(null)}>
-              &times;
-            </button>
-            <img src={selectedImage} alt="Enlarged" className="modal-image" />
-          </div>
-        </div>
-      )}
+                                            <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+                                            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                                                <button className="close-btn" onClick={() => setSelectedImage(null)}>
+                                                &times;
+                                                </button>
+                                                <img src={selectedImage} alt="Enlarged" className="modal-image" />
+                                            </div>
+                                            </div>
+                                        )}
 
                         {/* Filter */}
                         {/* <div className="select js-down-done">
@@ -375,7 +376,8 @@ export default function Portfolio() {
              
            
                 {/* Footer */}
-                {/* <footer className="footer footer-fully js-scroll-show">
+                <Footer/>
+               {/* <footer className="footer footer-fully js-scroll-show">
                     <ul className="footer__contacts list-unstyled">
                         <li>Phone: +1 (00) 123-45-67</li>
                         <li>Email: hello@acrdeco.com</li>
@@ -392,7 +394,7 @@ export default function Portfolio() {
                             <i className="icon-linkedin" />
                         </a>
                     </div>
-                </footer>
+                </footer> */}
                 {/* /Footer */}
             </main> 
             <Navbar />

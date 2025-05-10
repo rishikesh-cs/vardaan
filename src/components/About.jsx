@@ -28,77 +28,14 @@ export default function About() {
 
     return (
         <>
-            {/* Mirrored from art-template.ru/ardeco_html/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Apr 2025 10:54:28 GMT */}
-            <meta charSet="utf-8" />
-            <title>ARCDECO – About Us</title>
-            {/* Meta Data */}
-            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-            <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1, shrink-to-fit=no"
-            />
-            <meta name="format-detection" content="telephone=no" />
-            <meta name="format-detection" content="address=no" />
-            <meta name="author" content="ArtTemplate" />
-            <meta
-                name="description"
-                content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-            />
-            {/* Twitter data */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@ArtTemplates" />
-            <meta name="twitter:title" content="ARCDECO" />
-            <meta
-                name="twitter:description"
-                content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-            />
-            <meta name="twitter:image" content="./images/social.html" />
-            {/* Open Graph data */}
-            <meta property="og:title" content="ArtTemplate" />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="your url website" />
-            <meta property="og:image" content="./images/social.html" />
-            <meta
-                property="og:description"
-                content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-            />
-            <meta property="og:site_name" content="ARCDECO" />
-            {/* Favicons */}
-            <link
-                rel="apple-touch-icon"
-                sizes="144x144"
-                href="./images/favicons/apple-touch-icon-144x144.png"
-            />
-            <link
-                rel="apple-touch-icon"
-                sizes="114x114"
-                href="./images/favicons/apple-touch-icon-114x114.png"
-            />
-            <link
-                rel="apple-touch-icon"
-                sizes="72x72"
-                href="./images/favicons/apple-touch-icon-72x72.png"
-            />
-            <link
-                rel="apple-touch-icon"
-                sizes="57x57"
-                href="./images/favicons/apple-touch-icon-57x57.png"
-            />
-            <link
-                rel="shortcut icon"
-                href="./images/favicons/favicon.png"
-                type="image/png"
-            />
-            {/* Styles */}
-            <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-            <link rel="stylesheet" type="text/css" href="./demo/style-demo.css" />
+        
             {/* Preloader */}
             <div className="preloader">
                 <div className="preloader__wrap">
                     <img
                         className="preloader__logo"
-                        src="./images/logotype.svg"
-                        alt="ARCDECO"
+                          src="./img/logo2.png"
+                        alt="vardaan_interior"
                     />
                     <div className="preloader__progress">
                         <span />
@@ -118,8 +55,8 @@ export default function About() {
                     <Link className="logo-link magnetic" to='/'>
                         <img
                             className="logotype"
-                            src="./images/logotype.svg"
-                            alt="ARCDECO"
+                            src="./img/logo5.png"
+                            alt="vardaan_interior"
                         />
                     </Link>
                 </div>
@@ -341,7 +278,7 @@ export default function About() {
                     <div className="video-container js-video">
                         <iframe
                             className="js-video-iframe"
-                            data-src="https://www.youtube.com/embed/Gu6z6kIukgg?showinfo=0&rel=0&autoplay=1"
+                            data-src="https://www.youtube.com/embed/GDQ3SVuLIAo?showinfo=0&rel=0&autoplay=1"
                         />
                         <div
                             className="video__poster js-image"

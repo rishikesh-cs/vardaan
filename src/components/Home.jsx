@@ -1,7 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import Navbar from './Navbar'
+import Footer from './Footer';
 
 export default function Home() {
 
@@ -29,77 +30,14 @@ export default function Home() {
   return (
     <>
       <>
-        {/* Mirrored from art-template.ru/ardeco_html/index_v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Apr 2025 10:54:22 GMT */}
-        <meta charSet="utf-8" />
-        <title>ARCDECO – Interior-Design</title>
-        {/* Meta Data */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="format-detection" content="address=no" />
-        <meta name="author" content="ArtTemplate" />
-        <meta
-          name="description"
-          content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-        />
-        {/* Twitter data */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ArtTemplates" />
-        <meta name="twitter:title" content="ARCDECO" />
-        <meta
-          name="twitter:description"
-          content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-        />
-        <meta name="twitter:image" content="./images/social.html" />
-        {/* Open Graph data */}
-        <meta property="og:title" content="ArtTemplate" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="your url website" />
-        <meta property="og:image" content="./images/social.html" />
-        <meta
-          property="og:description"
-          content="Arcdeco is clean, modern, creative & minimal HTML5 template for Interior Design, Architecture & Decor agencies."
-        />
-        <meta property="og:site_name" content="ARCDECO" />
-        {/* Favicons */}
-        <link
-          rel="apple-touch-icon"
-          sizes="144x144"
-          href="./images/favicons/apple-touch-icon-144x144.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="114x114"
-          href="./images/favicons/apple-touch-icon-114x114.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="72x72"
-          href="./images/favicons/apple-touch-icon-72x72.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="57x57"
-          href="./images/favicons/apple-touch-icon-57x57.png"
-        />
-        <link
-          rel="shortcut icon"
-          href="./images/favicons/favicon.png"
-          type="image/png"
-        />
-        {/* Styles */}
-        <link rel="stylesheet" type="text/css" href="./styles/style.css" />
-        <link rel="stylesheet" type="text/css" href="./demo/style-demo.css" />
+
         {/* Preloader */}
         <div className="preloader">
           <div className="preloader__wrap">
             <img
               className="preloader__logo"
-              src="./images/logotype.svg"
-              alt="ARCDECO"
+              src="./img/logo2.png"
+              alt="vardaan interior design"
             />
             <div className="preloader__progress">
               <span />
@@ -113,8 +51,8 @@ export default function Home() {
             <Link className="logo-link magnetic" to=''>
               <img
                 className="logotype"
-                src="./images/logotype.svg"
-                alt="ARCDECO"
+                src="./img/logo5.png"
+                alt="vardaan interior design"
               />
             </Link>
             {/* </a> */}
@@ -131,7 +69,7 @@ export default function Home() {
           <header className="hero hero-intro overlay--45">
             <div className="hero__header">
               <h1 className="title title--display-1 js-lines">
-                Architecture
+                Interior Design
                 <br />
                 and decor.
               </h1>
@@ -160,7 +98,7 @@ export default function Home() {
             {/* Main image */}
             <img
               className="hero__image cover js-scale js-parallax"
-              src="./img/slider_image_08.jpg"
+              src="./img/cara.png"
               alt=""
             />
           </header>
@@ -398,7 +336,7 @@ export default function Home() {
             </div>
           </div>
           {/* Footer */}
-          <footer className="footer js-scroll-show">
+          {/* <footer className="footer js-scroll-show">
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -421,7 +359,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </footer>
+          </footer> */}
+          <Footer/>
           {/* /Footer */}
         </main>
         <Navbar />
@@ -448,7 +387,7 @@ export default function Home() {
                 {/* <a data-text="About us." href="about.html">
                   About us.
                 </a> */}
-                <Link to='/about'>About Us.</Link>
+        
               {/* </li>
               <li className="nav-overlay__menu-item">
                 <span>04</span>
