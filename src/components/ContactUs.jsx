@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import './Contact.css';
 
 export default function ContactUs() {
 
@@ -72,11 +73,66 @@ export default function ContactUs() {
             {/* /Top */}
             {/* Contact */}
             <main className="js-scroll">
-                <div className="container-fully vh-100 m-0" style={{paddingTop:"250px"}}>
+                <div className="form-main">
+  <div className="main-wrapper">
+    <h2 className="form-head">Contact From</h2>
+    <form className="form-wrapper">
+      <div className="form-card">
+        <input
+          className="form-input"
+          type="text"
+          name="full_name"
+          required="required"
+        />
+        <label className="form-label" htmlFor="full_name">
+          Full Name
+        </label>
+      </div>
+      <div className="form-card">
+        <input
+          className="form-input"
+          type="text"
+          name="email"
+          required="required"
+        />
+        <label className="form-label" htmlFor="email">
+          Email
+        </label>
+      </div>
+      <div className="form-card">
+        <input
+          className="form-input"
+          type="number"
+          name="phone_number"
+          required="required"
+        />
+        <label className="form-label" htmlFor="phone_number">
+          Phone number
+        </label>
+      </div>
+      <div className="form-card">
+        <textarea
+          className="form-textarea"
+          maxLength={420}
+          rows={3}
+          name="phone_number"
+          required="required"
+          defaultValue={""}
+        />
+        <label className="form-textarea-label" htmlFor="phone_number">
+          Address
+        </label>
+      </div>
+      <div className="btn-wrap">
+        <button> Submit </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+                {/* <div className="container-fully vh-100 m-0" style={{paddingTop:"250px"}}>
                     <div className="row align-items-md-center">
-                        {/* <div className="col-12 col-lg-7 col-xl-6" >
-                               <img src='./img/image_project_08.jpg' alt='contact vardaan interior' />
-                        </div> */}
+                       
                         <div className="col-12 col-lg-12 col-xl-12">
                       
                                 <form
@@ -133,13 +189,13 @@ export default function ContactUs() {
                             </form>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </main>
             {/* /Contact */}
             {/* Overlay nav */}
 
             <Navbar />
-<Footer/>
+{/* <Footer/> */}
             {/* <div className="nav-overlay">
                 <div className="nav-overlay__bg" />
                 <div className="nav-overlay__container">
