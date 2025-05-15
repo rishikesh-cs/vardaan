@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 // import AdminSignup from './components/AdminSignup';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
+import Services from './components/Services';
 function App() {
    return (
       <>
@@ -18,6 +19,7 @@ function App() {
          <Route path='/' element = {<Home />} />
          <Route path='/about' element = {<About/>} />
          <Route path='/contactus' element = {<ContactUs/>} />
+          <Route path='/services' element = {<Services/>} />
                    <Route path='/portfolio' element = {<Portfolio />} />         
                    {/* <Route path="/upload" element={<UploadForm />} /> */}
                    <Route path="/display" element={<DisplayImage />} />

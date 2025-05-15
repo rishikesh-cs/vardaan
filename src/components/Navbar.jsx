@@ -36,6 +36,13 @@ export default function Navbar() {
                 </a> */}
                 <Link to='/contactus'>Contact us.</Link>
               </li>
+               <li className="nav-overlay__menu-item">
+                <span>04</span>
+                {/* <a data-text="Contacts." href="contact.html">
+                  Contacts.
+                </a> */}
+                <Link to='/services'>Services.</Link>
+              </li>
             </ul>
           </div>
         </div>

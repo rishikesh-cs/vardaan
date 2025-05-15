@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 export default function About() {
 
@@ -88,7 +89,7 @@ export default function About() {
                     </div>
                     <div className="image-gutter">
                         <div className="reveal-box">
-                            <img className="cover" src="./img/about_01.jpg" alt="" />
+                            <img className="cover" src="./img/slider_image_08.jpg" alt="" />
                             <span className="reveal-overlay" />
                         </div>
                         <span className="text-rotate">About Us</span>
@@ -109,31 +110,31 @@ export default function About() {
                                 <li className="list-row__item js-list">
                                     <span className="list-row__col-num weight--600">01.</span>
                                     <h4 className="list-row__col-title title title--h5 weight--600">
-                                        Design Project
+                                        Interior Design
                                     </h4>
                                 </li>
                                 <li className="list-row__item js-list">
                                     <span className="list-row__col-num weight--600">02.</span>
                                     <h4 className="list-row__col-title title title--h5 weight--600">
-                                        Interior Visualization
+                                        Architectural Design
                                     </h4>
                                 </li>
                                 <li className="list-row__item js-list">
                                     <span className="list-row__col-num weight--600">03.</span>
                                     <h4 className="list-row__col-title title title--h5 weight--600">
-                                        Landscape Design
+                                       Vastu Services
                                     </h4>
                                 </li>
                                 <li className="list-row__item js-list">
                                     <span className="list-row__col-num weight--600">04.</span>
                                     <h4 className="list-row__col-title title title--h5 weight--600">
-                                        Architect Services
+                                       Building Elevation
                                     </h4>
                                 </li>
                                 <li className="list-row__item js-list">
                                     <span className="list-row__col-num weight--600">05.</span>
                                     <h4 className="list-row__col-title title title--h5 weight--600">
-                                        Office design
+                                       Landscape Design
                                     </h4>
                                 </li>
                             </ul>
@@ -292,7 +293,7 @@ export default function About() {
                 </div>
                 {/* /Video */}
                 {/* Clients */}
-                <div className="container-fully section-about mt--0">
+                {/* <div className="container-fully section-about mt--0">
                     <div className="brand-grid">
                         <div className="brand-grid__item js-scroll-show">
                             <img src="./img/brand-01.svg" alt="" />
@@ -325,9 +326,9 @@ export default function About() {
                             <img src="./img/brand-10.svg" alt="" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* Footer */}
-                <footer className="footer js-scroll-show">
+                {/* <footer className="footer js-scroll-show">
                     <div className="container-fully">
                         <div className="row">
                             <div className="col-12">
@@ -350,7 +351,8 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                </footer>
+                </footer> */}
+                <Footer/>
                 {/* /Footer */}
             </main>
             {/* /About Us */}

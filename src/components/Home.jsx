@@ -71,7 +71,7 @@ export default function Home() {
               <h1 className="title title--display-1 js-lines">
                 Interior Design
                 <br />
-                and decor.
+                and Vastu.
               </h1>
             </div>
             <div className="note">
@@ -85,13 +85,13 @@ export default function Home() {
             </div>
             {/* Social */}
             <div className="social social-floating">
-              <a className="social__link" href="https://www.instagram.com/">
+              <a className="social__link" href="#">
                 <i className="icon-instagram" />
               </a>
-              <a className="social__link" href="https://www.behance.com/">
-                <i className="icon-behance" />
+              <a className="social__link" href="https://www.youtube.com/@vardaaninterior26">
+                <i className="icon-youtube-play" />
               </a>
-              <a className="social__link" href="https://www.linkedin.com/">
+              <a className="social__link" href="#">
                 <i className="icon-linkedin" />
               </a>
             </div>
@@ -164,7 +164,7 @@ export default function Home() {
             <span className="text-rotate">Cases</span>
             <div className="row">
               <div className="col-12 col-lg-8 col-xl-6">
-                <h2 className="title title--h1 js-lines">Relevante cases.</h2>
+                <h2 className="title title--h1 js-lines">Our Projects.</h2>
                 <div className="description js-scroll-show">
                   <p>
                     The essence of interior design will always be about people and how
@@ -181,13 +181,13 @@ export default function Home() {
               {/* Item 1 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <a href="project_single.html">
+                  <Link to="/portfolio">
                     <img
                       className="cover lazyload"
                       src="./img/image_news_06.jpg"
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <span className="reveal-overlay" />
                 </div>
               </figure>
@@ -195,13 +195,13 @@ export default function Home() {
               {/* Item 2 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <a href="project_single.html">
+                  <Link to="/portfolio">
                     <img
                       className="cover lazyload"
                       src="./img/image_project_13.jpg"
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <span className="reveal-overlay" />
                 </div>
               </figure>
@@ -209,13 +209,13 @@ export default function Home() {
               {/* Item 3 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <a href="project_single.html">
+                  <Link to="/portfolio">
                     <img
                       className="cover lazyload"
                       src="./img/slider_image_09.jpg"
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <span className="reveal-overlay" />
                 </div>
               </figure>
@@ -223,13 +223,13 @@ export default function Home() {
               {/* Item 4 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <a href="project_single.html">
+                  <Link to="/portfolio">
                     <img
                       className="cover lazyload"
                       src="./img/slider_image_04.jpg"
                       alt=""
                     />
-                  </a>
+                  </Link>
                   <span className="reveal-overlay" />
                 </div>
               </figure>
@@ -245,7 +245,7 @@ export default function Home() {
             <span className="text-rotate">Services</span>
             <div className="row">
               <div className="col-12 col-lg-8 col-xl-6">
-                <h2 className="title title--h1 js-lines">Services.</h2>
+                <h2 className="title title--h1 js-lines" >Services.</h2>
                 <div className="description js-scroll-show">
                   <p>
                     The essence of interior design will always be about people and how
@@ -258,6 +258,7 @@ export default function Home() {
           </div>
           <div className="services js-scroll-show">
             {/* Item */}
+       
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
@@ -271,7 +272,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
+     
             {/* Item */}
+          
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
@@ -285,23 +288,27 @@ export default function Home() {
                 </p>
               </div>
             </div>
+        
             {/* Item */}
+            
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
                 data-image="./img/services_03.jpg"
               />
               <div className="services__item-details">
-                <h4 className="title title--h3 js-lines">Landscape</h4>
+                <h4 className="title title--h3 js-lines">Vastu</h4>
                 <p className="description js-scroll-show">
                   The essence of interior design will always be about people and how
                   they live.
                 </p>
               </div>
             </div>
+         
           </div>
+        
           {/* Clients */}
-          <div className="container-fully section-about">
+          {/* <div className="container-fully section-about">
             <div className="brand-grid">
               <div className="brand-grid__item js-scroll-show">
                 <img src="./img/brand-01.svg" alt="" />
@@ -334,7 +341,7 @@ export default function Home() {
                 <img src="./img/brand-10.svg" alt="" />
               </div>
             </div>
-          </div>
+          </div> */}
           {/* Footer */}
           {/* <footer className="footer js-scroll-show">
             <div className="container">

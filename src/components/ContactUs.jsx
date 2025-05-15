@@ -1,8 +1,8 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
-import Footer from './Footer';
+
 import './Contact.css';
 
 export default function ContactUs() {
@@ -37,7 +37,7 @@ export default function ContactUs() {
                     <img
                         className="preloader__logo"
                          src="./img/logo2.png"
-                        alt="ARCDECO"
+                        alt="vardaan interior"
                     />
                     <div className="preloader__progress">
                         <span />
@@ -60,7 +60,7 @@ export default function ContactUs() {
                     <img
                         className="logotype"
                       src="./img/logo5.png"
-                        alt="ARCDECO"
+                        alt="vardaan interior"
                     />
                 </Link>
 
