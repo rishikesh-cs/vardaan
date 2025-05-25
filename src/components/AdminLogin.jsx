@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import Logo from './Logo';
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -52,15 +53,15 @@ const AdminLogin = () => {
             src="./img/logo2.png"
             alt="vardaan interior design"
           />
-          <div className="preloader__progress">
+          {/* <div className="preloader__progress">
             <span />
-          </div>
+          </div> */}
         </div>
       </div>
       {/* Top */}
       <nav className="navbar navbar-compact">
-        <div className="mr-auto">
-          {/* <a className="logo-link magnetic" href="index.html"> */}
+        {/* <div className="mr-auto">
+        
           <Link className="logo-link magnetic" to=''>
             <img
               className="logotype"
@@ -68,8 +69,9 @@ const AdminLogin = () => {
               alt="vardaan interior design"
             />
           </Link>
-          {/* </a> */}
-        </div>
+      
+        </div> */}
+        <Logo/>
         <div className="ml-sm-auto">
           <button className="hamburger zoom-cursor magnetic" type="button">
             <span className="hamburger__inner" />

@@ -1281,6 +1281,16 @@ iframe {
   position: relative;
   transition: transform .4s ease-in-out;
 }
+@media only screen and (min-width: 600px) {
+  #logom{
+  display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #logo{
+    display: none;
+  }
+}
 
 .hamburger {
   cursor: pointer;

@@ -11,7 +11,7 @@ export default function Navbar() {
             <ul className="nav-overlay__menu">
               <li className="nav-overlay__menu-item">
                 <span>01</span>
-                <Link to='/portfolio'>Portfolio.</Link>
+                <Link to='/projects'>Projects.</Link>
                 {/* <a data-text="Portfolio." href="portfolio_grid.html">
                   Portfolio.
                 </a> */}

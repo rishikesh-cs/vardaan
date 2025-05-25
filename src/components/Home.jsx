@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import {Link} from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer';
+import Logo from './Logo';
 
 export default function Home() {
 
@@ -39,24 +40,25 @@ export default function Home() {
               src="./img/logo2.png"
               alt="vardaan interior design"
             />
-            <div className="preloader__progress">
+            {/* <div className="preloader__progress">
               <span />
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Top */}
         <nav className="navbar navbar-compact">
-          <div className="mr-auto">
-            {/* <a className="logo-link magnetic" href="index.html"> */}
-            <Link className="logo-link magnetic" to=''>
+          {/* <div className="mr-auto">
+          
+            <Link className="logo-link magnetic" to='/'>
               <img
                 className="logotype"
-                src="./img/logo5.png"
+                src="./img/logonew.png"
                 alt="vardaan interior design"
               />
             </Link>
-            {/* </a> */}
-          </div>
+           
+          </div> */}
+          <Logo/>
           <div className="ml-sm-auto">
             <button className="hamburger zoom-cursor magnetic" type="button">
               <span className="hamburger__inner" />
@@ -78,21 +80,20 @@ export default function Home() {
               <div className="note__item js-scroll-show">
                 <h4 className="title title--display-1">Introduction</h4>
                 <p className="description">
-                  The essence of interior design will always be about people and how
-                  they live.
+               Vardaan Interior brings harmony and elegance into your spaces with expert interior design and Vastu integration. We craft environments that reflect your lifestyle and promote well-being.
                 </p>
               </div>
             </div>
             {/* Social */}
             <div className="social social-floating">
-              <a className="social__link" href="#">
+              <a className="social__link" target='blank' href="https://www.instagram.com/vardaaninterior?igsh=N2Z2cDh4a2Q1eGsz">
                 <i className="icon-instagram" />
               </a>
-              <a className="social__link" href="https://www.youtube.com/@vardaaninterior26">
+              <a className="social__link" target='blank' href="https://www.youtube.com/@vardaaninterior26">
                 <i className="icon-youtube-play" />
               </a>
-              <a className="social__link" href="#">
-                <i className="icon-linkedin" />
+              <a className="social__link" target='blank' href="https://www.facebook.com/share/1Fa1nuACDU/">
+                <i className="icon-facebook" />
               </a>
             </div>
             {/* Main image */}
@@ -109,24 +110,15 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-12">
                 <h2 className="title title--h2 js-lines">
-                  Be faithful to your own taste, because nothing you really like is
-                  ever out of style.
+                Discover the Art of Space with Vardaan Interior.
                 </h2>
                 <div className="description description-column js-scroll-show">
-                  <p>
-                    The essence of interior design will always be about people and how
-                    they live. It is about the realities of what makes for an
-                    attractive, civilized, meaningful environment, not about fashion
-                    or what's in or what's out. This is not an easy job. Be faithful
-                    to your own taste, because nothing you really like is ever out of
-                    style.
-                  </p>
-                  <p>
-                    Form follows function — that has been misunderstood. Form and
-                    function should be one, joined in a spiritual union. Innovation is
-                    often the ability to reach into the past and bring back what is
-                    good, what is beautiful, what is useful, what is lasting.
-                  </p>
+               <p>
+  At Vardaan Interior, we blend creativity, functionality, and Vastu principles to design timeless interiors. Our mission is to transform living and working spaces into reflections of your personal style and spiritual balance.
+</p>
+             <p>
+  From conceptual planning to final execution, Vardaan Interior ensures every detail supports harmony, comfort, and aesthetics. Experience customized interior solutions designed for peace and prosperity.
+</p>
                 </div>
               </div>
             </div>
@@ -137,7 +129,7 @@ export default function Home() {
                   <div className="gallery__item reveal-box">
                     <img
                       className="cover lazyload"
-                      src="./img/about_04.jpg"
+                      src="./img/var7.jpg"
                       alt=""
                     />
                     <span className="reveal-overlay" />
@@ -145,7 +137,7 @@ export default function Home() {
                   <div className="gallery__item reveal-box">
                     <img
                       className="cover lazyload"
-                      src="./img/about_03.jpg"
+                      src="./img/var4.jpg"
                       alt=""
                     />
                     <span className="reveal-overlay" />
@@ -164,13 +156,11 @@ export default function Home() {
             <span className="text-rotate">Cases</span>
             <div className="row">
               <div className="col-12 col-lg-8 col-xl-6">
-                <h2 className="title title--h1 js-lines">Our Projects.</h2>
+                <h2 className="title title--h1 js-lines">Our Signature Projects.</h2>
                 <div className="description js-scroll-show">
-                  <p>
-                    The essence of interior design will always be about people and how
-                    they live. It is about the realities of what makes for an
-                    attractive, civilized.
-                  </p>
+                <p>
+  Vardaan Interior has curated exceptional interiors across residential, commercial, and spiritual spaces. Each project integrates Vastu guidelines with modern design to create beautiful, functional, and balanced environments.
+</p>
                 </div>
               </div>
             </div>
@@ -181,10 +171,10 @@ export default function Home() {
               {/* Item 1 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <Link to="/portfolio">
+                  <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/image_news_06.jpg"
+                      src="./img/var16.png"
                       alt=""
                     />
                   </Link>
@@ -195,10 +185,10 @@ export default function Home() {
               {/* Item 2 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <Link to="/portfolio">
+                  <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/image_project_13.jpg"
+                      src="./img/var17.jpg"
                       alt=""
                     />
                   </Link>
@@ -209,10 +199,10 @@ export default function Home() {
               {/* Item 3 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <Link to="/portfolio">
+                  <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/slider_image_09.jpg"
+                      src="./img/var18.jpg"
                       alt=""
                     />
                   </Link>
@@ -223,10 +213,10 @@ export default function Home() {
               {/* Item 4 */}
               <figure className="project-slider__item swiper-slide">
                 <div className="reveal-box">
-                  <Link to="/portfolio">
+                  <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/slider_image_04.jpg"
+                      src="./img/var19.jpg"
                       alt=""
                     />
                   </Link>
@@ -245,13 +235,11 @@ export default function Home() {
             <span className="text-rotate">Services</span>
             <div className="row">
               <div className="col-12 col-lg-8 col-xl-6">
-                <h2 className="title title--h1 js-lines" >Services.</h2>
+                <h2 className="title title--h1 js-lines" >Our Specialized Services.</h2>
                 <div className="description js-scroll-show">
-                  <p>
-                    The essence of interior design will always be about people and how
-                    they live. It is about the realities of what makes for an
-                    attractive, civilized.
-                  </p>
+                <p>
+  At Vardaan Interior, our services are tailored to bring your vision to life while aligning with ancient Vastu principles. Whether it’s your home, office, or retail space, we ensure a personalized and transformative design journey.
+</p>
                 </div>
               </div>
             </div>
@@ -265,10 +253,9 @@ export default function Home() {
                 data-image="./img/services_01.jpg"
               />
               <div className="services__item-details">
-                <h4 className="title title--h3 js-lines">Interior</h4>
+                <h4 className="title title--h3 js-lines">Interior Design</h4>
                 <p className="description js-scroll-show">
-                  The essence of interior design will always be about people and how
-                  they live.
+                 Vardaan Interior delivers bespoke designs that reflect your identity. We blend materials, colors, and layouts that resonate with your lifestyle and taste.
                 </p>
               </div>
             </div>
@@ -283,8 +270,7 @@ export default function Home() {
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Architecture</h4>
                 <p className="description js-scroll-show">
-                  The essence of interior design will always be about people and how
-                  they live.
+                  From planning to execution, Vardaan Interior brings architectural visions to life. Our designs combine utility, beauty, and Vastu for lasting impact.
                 </p>
               </div>
             </div>
@@ -297,10 +283,9 @@ export default function Home() {
                 data-image="./img/services_03.jpg"
               />
               <div className="services__item-details">
-                <h4 className="title title--h3 js-lines">Vastu</h4>
+                <h4 className="title title--h3 js-lines">Vastu Consultation</h4>
                 <p className="description js-scroll-show">
-                  The essence of interior design will always be about people and how
-                  they live.
+                  At Vardaan Interior, we offer expert Vastu consultations to align your space with cosmic energies. Enhance peace, health, and prosperity with our guidance.
                 </p>
               </div>
             </div>

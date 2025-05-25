@@ -1,12 +1,14 @@
 import React from 'react'
-import {  useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+
 import Navbar from './Navbar';
 
 import './Contact.css';
+import Logo from './Logo';
+import { error } from 'jquery';
 
 export default function ContactUs() {
-
+    const [thankYouMessage, setThankYouMessage] = useState(''); // ⬅️ Add state for message
     useEffect(() => {
         const script = document.createElement('script');
         script.src = '/js/common.js'; // path relative to public/
@@ -28,42 +30,51 @@ export default function ContactUs() {
         };
     });
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const form = e.target;
+        const url = "https://script.google.com/macros/s/AKfycbzOrd6_JE92z3l4gKEgNh-onyhJ7NHx_l0IZ0G7gPezkL2XD6V7BN9NwxDSGMixlALi/exec"
+        fetch(url, {
+            method: "POST",
+            headers: { 'Content-type': 'application/x-www-form-urlencoded' },
+            body: (`Name=${e.target.name.value}&Email=${e.target.email.value}&Number=${e.target.number.value}&City=${e.target.city.value}`)
+        }).then(res => res.text()).then(data => {
+            setThankYouMessage(data || "Thank you for contacting us");
+            setTimeout(() => setThankYouMessage(''), 5000); // ⬅️ Hide after 5 seconds
+            form.reset(); // ⬅️ Reset form
+        })
+            .catch(error => console.log(error));
+
+    }
     return (
         <>
-         
+
             {/* Preloader */}
             <div className="preloader">
                 <div className="preloader__wrap">
                     <img
                         className="preloader__logo"
-                         src="./img/logo2.png"
+                        src="./img/logo2.png"
                         alt="vardaan interior"
                     />
-                    <div className="preloader__progress">
+                    {/* <div className="preloader__progress">
                         <span />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             {/* Top */}
             <nav className="navbar navbar-compact">
-                {/* <div className="mr-auto">
-                    <a className="logo-link magnetic" href="index.html">
-                        <img
-                            className="logotype"
-                            src="./images/logotype.svg"
-                            alt="ARCDECO"
-                        />
-                    </a>
-                </div> */}
 
+                {/* 
                 <Link className="logo-link magnetic" to='/'>
                     <img
                         className="logotype"
                       src="./img/logo5.png"
                         alt="vardaan interior"
                     />
-                </Link>
-
+                </Link> */}
+                <Logo />
+            
                 <div className="ml-sm-auto">
                     <button className="hamburger zoom-cursor magnetic" type="button">
                         <span className="hamburger__inner" />
@@ -74,43 +85,59 @@ export default function ContactUs() {
             {/* Contact */}
             <main className="js-scroll">
                 <div className="form-main">
-  <div className="main-wrapper">
-    <h2 className="form-head">Contact From</h2>
-    <form className="form-wrapper">
-      <div className="form-card">
-        <input
-          className="form-input"
-          type="text"
-          name="full_name"
-          required="required"
-        />
-        <label className="form-label" htmlFor="full_name">
-          Full Name
-        </label>
-      </div>
-      <div className="form-card">
-        <input
-          className="form-input"
-          type="text"
-          name="email"
-          required="required"
-        />
-        <label className="form-label" htmlFor="email">
-          Email
-        </label>
-      </div>
-      <div className="form-card">
-        <input
-          className="form-input"
-          type="number"
-          name="phone_number"
-          required="required"
-        />
-        <label className="form-label" htmlFor="phone_number">
-          Phone number
-        </label>
-      </div>
-      <div className="form-card">
+                    <div className="main-wrapper">
+                        <h2 className="form-head">Contact From</h2>
+                        {thankYouMessage && (
+                            <div style={{ color: 'white', textAlign: 'center', marginBottom: '10px' }}>
+                                {thankYouMessage}
+                            </div>
+                        )}
+                        <form className="form-wrapper" onSubmit={handleSubmit}>
+                            <div className="form-card">
+                                <input
+                                    className="form-input"
+                                    type="text"
+                                    name="name"
+                                    required="required"
+                                />
+                                <label className="form-label" htmlFor="full_name">
+                                    Full Name
+                                </label>
+                            </div>
+                            <div className="form-card">
+                                <input
+                                    className="form-input"
+                                    type="text"
+                                    name="email"
+                                    required="required"
+                                />
+                                <label className="form-label" htmlFor="email">
+                                    Email
+                                </label>
+                            </div>
+                            <div className="form-card">
+                                <input
+                                    className="form-input"
+                                    type="number"
+                                    name="number"
+                                    required="required"
+                                />
+                                <label className="form-label" htmlFor="phone_number">
+                                    Phone number
+                                </label>
+                            </div>
+                            <div className="form-card">
+                                <input
+                                    className="form-input"
+                                    type="text"
+                                    name="city"
+                                    required="required"
+                                />
+                                <label className="form-label" htmlFor="full_name">
+                                    City
+                                </label>
+                            </div>
+                            {/* <div className="form-card">
         <textarea
           className="form-textarea"
           maxLength={420}
@@ -122,13 +149,13 @@ export default function ContactUs() {
         <label className="form-textarea-label" htmlFor="phone_number">
           Address
         </label>
-      </div>
-      <div className="btn-wrap">
-        <button> Submit </button>
-      </div>
-    </form>
-  </div>
-</div>
+      </div> */}
+                            <div className="btn-wrap">
+                                <button type='submit'> Submit </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
                 {/* <div className="container-fully vh-100 m-0" style={{paddingTop:"250px"}}>
                     <div className="row align-items-md-center">
@@ -195,7 +222,7 @@ export default function ContactUs() {
             {/* Overlay nav */}
 
             <Navbar />
-{/* <Footer/> */}
+            {/* <Footer/> */}
             {/* <div className="nav-overlay">
                 <div className="nav-overlay__bg" />
                 <div className="nav-overlay__container">
