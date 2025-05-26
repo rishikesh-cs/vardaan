@@ -112,7 +112,7 @@ export default function Services() {
                   src="./images/layers.svg"
                   alt=""
                 />
-                <h3 className="title title--h4 js-lines">Interior Decoration</h3>
+                <h3 className="title title--h4 js-lines">Interior Designing</h3>
                 <p className="description js-lines">
                   We offer bespoke interior design solutions that combine modern aesthetics with traditional values. Our interior decoration services include custom furniture layouts, lighting, color coordination, and theme-based decor for residential and commercial spaces.
                 </p>
@@ -135,9 +135,9 @@ export default function Services() {
                   src="./images/cube-3.svg"
                   alt=""
                 />
-                <h3 className="title title--h4 js-lines">Design project</h3>
+                <h3 className="title title--h4 js-lines">Key project</h3>
                 <p className="description js-scroll-show">
-                  From space planning to final execution, our design project services offer end-to-end interior and architectural solutions. Vardaan Interior turns your vision into reality through detailed planning, 3D visualization, and expert execution.
+                  From space planning to final execution, our Key project services offer end-to-end interior and architectural solutions. Vardaan Interior turns your vision into reality through detailed planning, 3D visualization, and expert execution.
                 </p>
               </div>
             </div>
