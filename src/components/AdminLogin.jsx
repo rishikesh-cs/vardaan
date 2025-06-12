@@ -59,25 +59,16 @@ const AdminLogin = () => {
         </div>
       </div>
       {/* Top */}
-      <nav className="navbar navbar-compact">
-        {/* <div className="mr-auto">
-        
-          <Link className="logo-link magnetic" to=''>
-            <img
-              className="logotype"
-              src="./img/logo5.png"
-              alt="vardaan interior design"
-            />
-          </Link>
+      {/* <nav className="navbar navbar-compact">
       
-        </div> */}
         <Logo/>
         <div className="ml-sm-auto">
           <button className="hamburger zoom-cursor magnetic" type="button">
             <span className="hamburger__inner" />
           </button>
         </div>
-      </nav>
+      </nav> */}
+      <Navbar/>
       <main className="js-scroll">
         <div className="container-fullyy vh-100 m-5" >
           <div className="row align-items-md-center">
@@ -135,7 +126,7 @@ const AdminLogin = () => {
           </div>
         </div>
       </main>
-      <Navbar />
+      {/* <Navbar /> */}
       <Footer />
 
     </>

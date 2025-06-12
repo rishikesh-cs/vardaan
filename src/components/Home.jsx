@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer';
 import Logo from './Logo';
@@ -8,25 +8,25 @@ import Logo from './Logo';
 export default function Home() {
 
   useEffect(() => {
-          const script = document.createElement('script');
-          script.src = '/js/common.js'; // path relative to public/
-          script.async = true;
-      
-          script.onload = () => {
-            if (typeof window.anime === 'function') {
-              window.anime(); // Call the function
-            } else {
-              console.error("anime is not defined");
-            }
-          };
-      
-          document.body.appendChild(script);
-      
-          // Cleanup
-          return () => {
-            document.body.removeChild(script);
-          };
-      });
+    const script = document.createElement('script');
+    script.src = '/js/common.js'; // path relative to public/
+    script.async = true;
+
+    script.onload = () => {
+      if (typeof window.anime === 'function') {
+        window.anime(); // Call the function
+      } else {
+        console.error("anime is not defined");
+      }
+    };
+
+    document.body.appendChild(script);
+
+    // Cleanup
+    return () => {
+      document.body.removeChild(script);
+    };
+  },[]);
 
   return (
     <>
@@ -46,25 +46,16 @@ export default function Home() {
           </div>
         </div>
         {/* Top */}
-        <nav className="navbar navbar-compact">
-          {/* <div className="mr-auto">
-          
-            <Link className="logo-link magnetic" to='/'>
-              <img
-                className="logotype"
-                src="./img/logonew.png"
-                alt="vardaan interior design"
-              />
-            </Link>
-           
-          </div> */}
-          <Logo/>
+        {/* <nav className="navbar navbar-compact">
+
+          <Logo />
           <div className="ml-sm-auto">
             <button className="hamburger zoom-cursor magnetic" type="button">
               <span className="hamburger__inner" />
             </button>
           </div>
-        </nav>
+        </nav> */}
+      <Navbar/>
         {/* /Top */}
         <main className="js-scroll">
           {/* Intro */}
@@ -80,7 +71,7 @@ export default function Home() {
               <div className="note__item js-scroll-show">
                 <h4 className="title title--display-1">Introduction</h4>
                 <p className="description">
-               Vardaan Interior brings harmony and elegance into your spaces with expert interior design and Vastu integration. We craft environments that reflect your lifestyle and promote well-being.
+                  Vardaan Interior brings harmony and elegance into your spaces with expert interior design and Vastu integration. We craft environments that reflect your lifestyle and promote well-being.
                 </p>
               </div>
             </div>
@@ -110,15 +101,15 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-12">
                 <h2 className="title title--h2 js-lines">
-                Discover the Art of Space with Vardaan Interior.
+                  Discover the Art of Space with Vardaan Interior.
                 </h2>
                 <div className="description description-column js-scroll-show">
-               <p>
-  At Vardaan Interior, we blend creativity, functionality, and Vastu principles to design timeless interiors. Our mission is to transform living and working spaces into reflections of your personal style and spiritual balance.
-</p>
-             <p>
-  From conceptual planning to final execution, Vardaan Interior ensures every detail supports harmony, comfort, and aesthetics. Experience customized interior solutions designed for peace and prosperity.
-</p>
+                  <p>
+                    At Vardaan Interior, we blend creativity, functionality, and Vastu principles to design timeless interiors. Our mission is to transform living and working spaces into reflections of your personal style and spiritual balance.
+                  </p>
+                  <p>
+                    From conceptual planning to final execution, Vardaan Interior ensures every detail supports harmony, comfort, and aesthetics. Experience customized interior solutions designed for peace and prosperity.
+                  </p>
                 </div>
               </div>
             </div>
@@ -158,9 +149,9 @@ export default function Home() {
               <div className="col-12 col-lg-8 col-xl-6">
                 <h2 className="title title--h1 js-lines">Our Signature Projects.</h2>
                 <div className="description js-scroll-show">
-                <p>
-  Vardaan Interior has curated exceptional interiors across residential, commercial, and spiritual spaces. Each project integrates Vastu guidelines with modern design to create beautiful, functional, and balanced environments.
-</p>
+                  <p>
+                    Vardaan Interior has curated exceptional interiors across residential, commercial, and spiritual spaces. Each project integrates Vastu guidelines with modern design to create beautiful, functional, and balanced environments.
+                  </p>
                 </div>
               </div>
             </div>
@@ -237,16 +228,16 @@ export default function Home() {
               <div className="col-12 col-lg-8 col-xl-6">
                 <h2 className="title title--h1 js-lines" >Our Specialized Services.</h2>
                 <div className="description js-scroll-show">
-                <p>
-  At Vardaan Interior, our services are tailored to bring your vision to life while aligning with ancient Vastu principles. Whether it’s your home, office, or retail space, we ensure a personalized and transformative design journey.
-</p>
+                  <p>
+                    At Vardaan Interior, our services are tailored to bring your vision to life while aligning with ancient Vastu principles. Whether it’s your home, office, or retail space, we ensure a personalized and transformative design journey.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="services js-scroll-show">
             {/* Item */}
-       
+
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
@@ -255,13 +246,13 @@ export default function Home() {
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Interior Design</h4>
                 <p className="description js-scroll-show">
-                 Vardaan Interior delivers bespoke designs that reflect your identity. We blend materials, colors, and layouts that resonate with your lifestyle and taste.
+                  Vardaan Interior delivers bespoke designs that reflect your identity. We blend materials, colors, and layouts that resonate with your lifestyle and taste.
                 </p>
               </div>
             </div>
-     
+
             {/* Item */}
-          
+
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
@@ -274,13 +265,13 @@ export default function Home() {
                 </p>
               </div>
             </div>
-        
+
             {/* Item */}
-            
+
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
-                data-image="./img/services_03.jpg"
+                data-image="./img/vastu.jpg"
               />
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Vastu Consultation</h4>
@@ -289,9 +280,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-         
+
           </div>
-        
+
           {/* Clients */}
           {/* <div className="container-fully section-about">
             <div className="brand-grid">
@@ -327,133 +318,17 @@ export default function Home() {
               </div>
             </div>
           </div> */}
-          {/* Footer */}
-          {/* <footer className="footer js-scroll-show">
-            <div className="container">
-              <div className="row">
-                <div className="col-12">
-                  <ul className="footer__contacts list-unstyled">
-                    <li>Phone: +1 (00) 123-45-67</li>
-                    <li>Email: hello@acrdeco.com</li>
-                    <li>Address: 756 Livingston Street, Brooklyn, NY 11201</li>
-                  </ul>
-                  <div className="social footer__social">
-                    <a className="social__link" href="https://www.instagram.com/">
-                      <i className="icon-instagram" />
-                    </a>
-                    <a className="social__link" href="https://www.behance.com/">
-                      <i className="icon-behance" />
-                    </a>
-                    <a className="social__link" href="https://www.linkedin.com/">
-                      <i className="icon-linkedin" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer> */}
-          <Footer/>
-          {/* /Footer */}
+
+
+          <Footer />
+
         </main>
-        <Navbar />
-        {/* Overlay nav */}
-        {/* <div className="nav-overlay">
-          <div className="nav-overlay__bg" />
-          <div className="nav-overlay__container">
-            <ul className="nav-overlay__menu">
-              <li className="nav-overlay__menu-item">
-                <span>01</span>
-                <Link to='/portfolio'>Portfolio.</Link> */}
-                {/* <a data-text="Portfolio." href="portfolio_grid.html">
-                  Portfolio.
-                </a> */}
-              {/* </li>
-              <li className="nav-overlay__menu-item">
-                <span>02</span>
-                <a data-text="Blog." href="blog.html">
-                  Blog.
-                </a>
-              </li>
-              <li className="nav-overlay__menu-item">
-                <span>03</span> */}
-                {/* <a data-text="About us." href="about.html">
-                  About us.
-                </a> */}
-        
-              {/* </li>
-              <li className="nav-overlay__menu-item">
-                <span>04</span>
-                <a data-text="Contacts." href="contact.html">
-                  Contacts.
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div> */}
-        {/* /Overlay nav */}
-        {/* Demo Menu */}
-        {/* <div className="btnSlideNav slideOpen" />
-        <div className="btnSlideNav slideClose" />
-        <ul className="slideNav">
-          <li className="slideNav__item">
-            <h4 className="title title--5">More pages</h4>
-          </li>
-          <li className="slideNav__item">
-            <a href="index.html">1. Homepage (Slider)</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="index_v2.html">2. Homepage v2</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="index_video_v2.html">3. Homepage v2 (video)</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="portfolio.html">4. Portfolio</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="portfolio_grid.html">5. Portfolio Grid</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="project_single.html">6. Project Single</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="about.html">7. About</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="contact.html">8. Contact</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="blog.html">9. Blog</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="blog_v2.html">10. Blog v2</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="project_single.html">11. Post Single</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="post_single_video.html">12. Post Single (video)</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="classic_nav.html">13. Classic Nav</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="services.html">14. Services</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="side_nav.html">15. Side Nav</a>
-          </li>
-          <li className="slideNav__item">
-            <a href="404.html">16. Error 404</a>
-          </li>
-        </ul>
-        <div className="overlay-slideNav" /> */}
-        {/* Demo Menu */}
-        {/* Cursor */}
+        {/* <Navbar /> */}
+
         <div className="node" id="node" />
         <div className="cursor" id="cursor" />
-        {/* JavaScripts */}
-        {/* Mirrored from art-template.ru/ardeco_html/index_v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Apr 2025 10:54:22 GMT */}
+
+
       </>
 
     </>

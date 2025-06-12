@@ -63,16 +63,9 @@ export default function ContactUs() {
                 </div>
             </div>
             {/* Top */}
-            <nav className="navbar navbar-compact">
+            {/* <nav className="navbar navbar-compact">
 
-                {/* 
-                <Link className="logo-link magnetic" to='/'>
-                    <img
-                        className="logotype"
-                      src="./img/logo5.png"
-                        alt="vardaan interior"
-                    />
-                </Link> */}
+         
                 <Logo />
             
                 <div className="ml-sm-auto">
@@ -80,7 +73,8 @@ export default function ContactUs() {
                         <span className="hamburger__inner" />
                     </button>
                 </div>
-            </nav>
+            </nav> */}
+            <Navbar/>
             {/* /Top */}
             {/* Contact */}
             <main className="js-scroll">
@@ -221,7 +215,7 @@ export default function ContactUs() {
             {/* /Contact */}
             {/* Overlay nav */}
 
-            <Navbar />
+            {/* <Navbar /> */}
             {/* <Footer/> */}
             {/* <div className="nav-overlay">
                 <div className="nav-overlay__bg" />

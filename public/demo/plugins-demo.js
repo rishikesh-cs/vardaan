@@ -8,9 +8,9 @@ $(".elastic-border").each(function(t){function s(t,i,o){this.x=t,this.ix=t,this.
   * Loaded 
   */
 
-$('body, .js-img-load').imagesLoaded({ background: !0 }).always( function( instance ) {
-    preloader(); //Init preloader
-});
+// $('body, .js-img-load').imagesLoaded({ background: !0 }).always( function( instance ) {
+//     preloader(); //Init preloader
+// });
 
 function preloader() {
     var tl = anime.timeline({

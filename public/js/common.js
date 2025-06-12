@@ -1,8 +1,4 @@
-/*
- * Author: ArtStyles (ArtTemplate)
- * Template Name: ARCDECO
- * Version: 1.0.3
-*/
+
 
 $(document).ready(function() {
 
@@ -40,7 +36,7 @@ $(document).ready(function() {
     });
     
     $('body, .js-img-load').imagesLoaded({ background: !0 }).always( function( instance ) {
-	    preloader(); //Init preloader
+	     preloader(); //Init preloader
     });
 
     

@@ -5,7 +5,7 @@ export default function Logo() {
     <>
    
      
-          <div className="mr-auto">
+          <div className="mr-auto ">
             {/* <a className="logo-link magnetic" href="index.html"> */}
             <Link className="logo-link magnetic" id='logo' to='/'>
               <img

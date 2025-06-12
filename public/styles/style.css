@@ -61,7 +61,17 @@
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
+.preloader--hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
 
+.preloader {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
 html {
   -webkit-overflow-scrolling: touch;
   -webkit-box-sizing: border-box;

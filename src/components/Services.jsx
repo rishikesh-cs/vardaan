@@ -41,22 +41,9 @@ export default function Services() {
         </div>
       </div>
       {/* Top */}
-      <nav className="navbar navbar-compact">
+      {/* <nav className="navbar navbar-compact">
         <div className="mr-auto">
-          {/* <a className="logo-link magnetic" href="index.html">
-                        <img
-                            className="logotype"
-                            src="./images/logotype.svg"
-                            alt="ARCDECO"
-                        />
-                    </a> */}
-          {/* <Link className="logo-link magnetic" to='/'>
-                        <img
-                            className="logotype"
-                            src="./img/logo5.png"
-                            alt="vardaan_interior"
-                        />
-                    </Link> */}
+
           <Logo />
         </div>
         <div className="ml-sm-auto">
@@ -64,9 +51,10 @@ export default function Services() {
             <span className="hamburger__inner" />
           </button>
         </div>
-      </nav>
-      <Navbar />
-      <>
+      </nav> */}
+      <Navbar/>
+      {/* <Navbar /> */}
+    
         <main className="js-scroll">
           <header className="header-page">
             <div className="container">
@@ -100,7 +88,7 @@ export default function Services() {
                   src="./images/cube-1.svg"
                   alt=""
                 />
-                <h3 className="title title--h4 js-lines">Architect services</h3>
+                <h3 className="title title--h4 js-lines">Architecture</h3>
                 <p className="description js-scroll-show">
                   Our architectural design services focus on creating innovative and sustainable building plans tailored to your space and vision. Vardaan Interior ensures a seamless blend of aesthetics and structural integrity, guided by decades of architectural expertise.
 
@@ -123,7 +111,7 @@ export default function Services() {
                   src="./images/cube-2.svg"
                   alt=""
                 />
-                <h3 className="title title--h4 js-lines">Vastu Services</h3>
+                <h3 className="title title--h4 js-lines">Vastu</h3>
                 <p className="description js-scroll-show">
                   Enhance positive energy in your space with our professional Vastu consultation services. We integrate ancient Vastu Shastra principles into interior layouts and architecture to bring harmony, health, and prosperity to your home or office.
 
@@ -135,7 +123,7 @@ export default function Services() {
                   src="./images/cube-3.svg"
                   alt=""
                 />
-                <h3 className="title title--h4 js-lines">Key project</h3>
+                <h3 className="title title--h4 js-lines">Turn Key project</h3>
                 <p className="description js-scroll-show">
                   From space planning to final execution, our Key project services offer end-to-end interior and architectural solutions. Vardaan Interior turns your vision into reality through detailed planning, 3D visualization, and expert execution.
                 </p>
@@ -153,7 +141,7 @@ export default function Services() {
         {/* /About Us */}
         <div class="node" id="node"></div>
         <div class="cursor" id="cursor"></div>
-      </>
+    
 
     </>
 

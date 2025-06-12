@@ -43,22 +43,9 @@ export default function Notfound() {
                 </div>
             </div>
             {/* Top */}
-            <nav className="navbar navbar-compact">
+            {/* <nav className="navbar navbar-compact">
                 <div className="mr-auto">
-                    {/* <a className="logo-link magnetic" href="index.html">
-                        <img
-                            className="logotype"
-                            src="./images/logotype.svg"
-                            alt="VARDAAN INTERIORS"
-                        />
-                    </a> */}
-                    {/* <Link className="logo-link magnetic" to='/'>
-                        <img
-                            className="logotype"
-                            src="./img/logo5.png"
-                            alt="ARCDECO"
-                        />
-                    </Link> */}
+              
                     <Logo/>
                 </div>
                 <div className="ml-sm-auto">
@@ -66,7 +53,8 @@ export default function Notfound() {
                         <span className="hamburger__inner" />
                     </button>
                 </div>
-            </nav>
+            </nav> */}
+            <Navbar/>
             {/* /Top */}
     <main className="js-scroll">
   {/* 404 */}
@@ -101,7 +89,7 @@ export default function Notfound() {
   </div>
   {/* /404 */}
 </main>
-<Navbar/>
+{/* <Navbar/> */}
 <Footer/>
     </>
   )

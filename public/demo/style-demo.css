@@ -1,16 +1,8 @@
-/* ------------------------------------------------
- Author: ArtStyles (Art)
- 
- Template Name: ARCDECO.
- version: 1.0.0
------------------------------------------------- */
+
 a.underlineNone {
   text-decoration: none;
 }
 
-/* -----------------------------------------------------------------
-    Styles Demo
------------------------------------------------------------------ */
 @media only screen and (max-width: 992px) {
   .navbar-demo {
     justify-content: center;
@@ -253,4 +245,3 @@ a.underlineNone {
   text-transform: uppercase;
 }
 
-/*# sourceMappingURL=style-demo.css.map */
