@@ -19,7 +19,7 @@ export default function Navbar() {
 }, []);
   return (
     <>
-{/*    
+   
     <div className="nav-overlay">
           <div className="nav-overlay__bg" />
           <div className="nav-overlay__container">
@@ -48,10 +48,10 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-    */}
+   
 
 <nav className="main-navbar">
-  <div className="container navbar-wrapper ">
+  <div className="container-flex navbar-wrapper ">
     <div className="navbar-left">
           <div className="logo ">
       <Logo />
@@ -68,6 +68,7 @@ export default function Navbar() {
     </div>
   </div>
 </nav>
+
     </>
   )
 }

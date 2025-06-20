@@ -41,7 +41,7 @@ export default function Services() {
         </div>
       </div>
       {/* Top */}
-      {/* <nav className="navbar navbar-compact">
+      <nav className="navbar navbar-compact">
         <div className="mr-auto">
 
           <Logo />
@@ -51,7 +51,7 @@ export default function Services() {
             <span className="hamburger__inner" />
           </button>
         </div>
-      </nav> */}
+      </nav>
       <Navbar/>
       {/* <Navbar /> */}
     

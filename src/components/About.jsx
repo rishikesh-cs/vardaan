@@ -34,14 +34,14 @@ export default function About() {
             </div>
 
             {/* Top */}
-            {/* <nav className="navbar navbar-compact">
+            <nav className="navbar navbar-compact">
                 <Logo />
                 <div className="ml-sm-auto">
                     <button className="hamburger zoom-cursor magnetic" type="button">
                         <span className="hamburger__inner" />
                     </button>
                 </div>
-            </nav> */}
+            </nav>
 <Navbar/>
             {/* About Us */}
             <main className="js-scroll">

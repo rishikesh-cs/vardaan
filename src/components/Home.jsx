@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </div>
         {/* Top */}
-        {/* <nav className="navbar navbar-compact">
+        <nav className="navbar navbar-compact">
 
           <Logo />
           <div className="ml-sm-auto">
@@ -54,7 +54,7 @@ export default function Home() {
               <span className="hamburger__inner" />
             </button>
           </div>
-        </nav> */}
+        </nav>
       <Navbar/>
         {/* /Top */}
         <main className="js-scroll">

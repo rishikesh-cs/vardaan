@@ -259,6 +259,7 @@ import Footer from './Footer';
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
 import './Portfolio.css';
+import Logo from './Logo';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -299,6 +300,17 @@ export default function Projects() {
           <img className="preloader__logo" src="./img/logo2.png" alt="VARDAAN INTERIORS" />
         </div>
       </div>
+
+      {/* Top */}
+              <nav className="navbar navbar-compact">
+      
+                <Logo />
+                <div className="ml-sm-auto">
+                  <button className="hamburger zoom-cursor magnetic" type="button">
+                    <span className="hamburger__inner" />
+                  </button>
+                </div>
+              </nav>
 
       <Navbar />
 
