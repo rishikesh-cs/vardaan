@@ -63,7 +63,7 @@ export default function ContactUs() {
                 </div>
             </div>
             {/* Top */}
-            {/* <nav className="navbar navbar-compact">
+            <nav className="navbar navbar-compact">
 
          
                 <Logo />
@@ -73,7 +73,7 @@ export default function ContactUs() {
                         <span className="hamburger__inner" />
                     </button>
                 </div>
-            </nav> */}
+            </nav>
             <Navbar/>
             {/* /Top */}
             {/* Contact */}

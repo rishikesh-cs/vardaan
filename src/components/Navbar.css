@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
 }
 
 .logo img {
@@ -44,8 +45,62 @@
 
 /* Hide hamburger on larger screens (not shown since we removed it) */
 /* Mobile styles */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .desktop-menu {
     display: none;
   }
+} */
+
+@media (min-width: 1281px) {
+  .main-navbar{
+    display: block !important;
+  }
+
+  .navbar{
+    display: none !important ;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-navbar{
+    display: block !important;
+  }
+
+  .navbar{
+    display: none !important ;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-navbar{
+    display: block !important;
+  }
+
+  .navbar{
+    display: none !important ;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main-navbar{
+    display: block !important;
+  }
+
+  .navbar{
+    display: none !important ;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .main-navbar{
+    display: none !important;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar{
+    display: none !important;
+  }
+
 }
