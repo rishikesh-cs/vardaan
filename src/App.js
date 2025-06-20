@@ -28,7 +28,8 @@ function App() {
             <Route path="/login" element={<AdminLogin />} />
             {/* <Route path="/signup" element={<AdminSignup />} /> */}
             <Route path="/admin" element={<PrivateRoute><AdminPanel /></PrivateRoute>} />
-            <Route path="/project/:projectId" element={<ProjectDetail />} />
+            {/* <Route path="/project/:projectId" element={<ProjectDetail />} /> */}
+              <Route path='/project' element={<ProjectDetail />} />
               <Route path="*" element={<Notfound />} />
          </Routes>
       </>
