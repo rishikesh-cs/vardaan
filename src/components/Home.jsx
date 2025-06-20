@@ -37,7 +37,7 @@ export default function Home() {
           <div className="preloader__wrap">
             <img
               className="preloader__logo"
-              src="./img/logo2.png"
+              src="./img/logo2.avif"
               alt="vardaan interior design"
             />
             {/* <div className="preloader__progress">
@@ -90,7 +90,7 @@ export default function Home() {
             {/* Main image */}
             <img
               className="hero__image cover js-scale js-parallax"
-              src="./img/cara.png"
+              src="./img/cara.avif"
               alt=""
             />
           </header>
@@ -120,7 +120,7 @@ export default function Home() {
                   <div className="gallery__item reveal-box">
                     <img
                       className="cover lazyload"
-                      src="./img/var7.jpg"
+                      src="./img/var7.avif"
                       alt=""
                     />
                     <span className="reveal-overlay" />
@@ -128,7 +128,7 @@ export default function Home() {
                   <div className="gallery__item reveal-box">
                     <img
                       className="cover lazyload"
-                      src="./img/var4.jpg"
+                      src="./img/var4.avif"
                       alt=""
                     />
                     <span className="reveal-overlay" />
@@ -165,7 +165,7 @@ export default function Home() {
                   <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/var16.png"
+                      src="./img/var16.avif"
                       alt=""
                     />
                   </Link>
@@ -179,7 +179,7 @@ export default function Home() {
                   <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/var17.jpg"
+                      src="./img/var17.avif"
                       alt=""
                     />
                   </Link>
@@ -193,7 +193,7 @@ export default function Home() {
                   <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/var18.jpg"
+                      src="./img/var18.avif"
                       alt=""
                     />
                   </Link>
@@ -207,7 +207,7 @@ export default function Home() {
                   <Link to="/projects">
                     <img
                       className="cover lazyload"
-                      src="./img/var19.jpg"
+                      src="./img/var19.avif"
                       alt=""
                     />
                   </Link>
@@ -241,7 +241,7 @@ export default function Home() {
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
-                data-image="./img/services_01.jpg"
+                data-image="./img/services_01.avif"
               />
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Interior Design</h4>
@@ -256,7 +256,7 @@ export default function Home() {
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
-                data-image="./img/services_02.jpg"
+                data-image="./img/services_02.avif"
               />
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Architecture</h4>
@@ -271,7 +271,7 @@ export default function Home() {
             <div className="services__item overlay--45">
               <div
                 className="services__item-bg js-image"
-                data-image="./img/vastu.jpg"
+                data-image="./img/vastu.avif"
               />
               <div className="services__item-details">
                 <h4 className="title title--h3 js-lines">Vastu Consultation</h4>

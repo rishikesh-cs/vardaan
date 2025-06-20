@@ -73,7 +73,7 @@ export default function Services() {
             </div>
             <div className="image-gutter">
               <div className="reveal-box">
-                <img className="cover" src="./img/var6.jpg" alt="" />
+                <img className="cover" src="./img/var6.avif" alt="" />
                 <span className="reveal-overlay" />
               </div>
               <span className="text-rotate">Services</span>

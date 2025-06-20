@@ -383,7 +383,7 @@ function AdminPanel() {
       <div className="preloader">
         <div className="preloader__wrap">
           <img className="preloader__logo" src="./img/logo2.png" alt="vardaan interior design" />
-          <div className="preloader__progress"><span /></div>
+          {/* <div className="preloader__progress"><span /></div> */}
         </div>
       </div>
 

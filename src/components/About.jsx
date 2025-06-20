@@ -62,7 +62,7 @@ export default function About() {
                     </div>
                     <div className="image-gutter">
                         <div className="reveal-box">
-                            <img className="cover" src="./img/var4.jpg" alt="Vardaan Interior Team" />
+                            <img className="cover" src="./img/var4.avif" alt="Vardaan Interior Team" />
                             <span className="reveal-overlay" />
                         </div>
                         <span className="text-rotate">About Us</span>
@@ -131,7 +131,7 @@ export default function About() {
                         <figure className="content-grid__item js-scroll-show">
                             <div className="content-grid__link">
                                 <picture className="content-grid__image-wrap image-wrap-fit js-zooming">
-                                    <img className="content-grid__image cover" src="./img/pulkit.jpeg" alt="Pulkit Jain Vardaan Interior" />
+                                    <img className="content-grid__image cover" src="./img/pulkit.avif" alt="Pulkit Jain Vardaan Interior" />
                                 </picture>
                                 <div className="content-grid__caption">
                                     <h2 className="content-grid__name title--h5">Pulkit Jain</h2>
@@ -160,7 +160,7 @@ export default function About() {
                             className="js-video-iframe"
                             data-src="https://www.youtube.com/embed/GDQ3SVuLIAo?showinfo=0&rel=0&autoplay=1"
                         />
-                        <div className="video__poster js-image" data-image="./img/image_news_06.jpg">
+                        <div className="video__poster js-image" data-image="./img/image_news_06.avif">
                             <button className="video__btn" type="button">
                                 PLAY
                             </button>
