@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 
 import './Contact.css';
 import Logo from './Logo';
-import { error } from 'jquery';
+
 
 export default function ContactUs() {
     const [thankYouMessage, setThankYouMessage] = useState(''); // ⬅️ Add state for message
@@ -33,7 +33,7 @@ export default function ContactUs() {
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
-        const url = "https://script.google.com/macros/s/AKfycbzOrd6_JE92z3l4gKEgNh-onyhJ7NHx_l0IZ0G7gPezkL2XD6V7BN9NwxDSGMixlALi/exec"
+        const url = "https://script.google.com/macros/s/AKfycbzYSElpt_7iVGixyraaSDRFdnibq4apeskyrGUSBV-5sHkFPXFEWGcaM1Qrmdg3RFo/exec"
         fetch(url, {
             method: "POST",
             headers: { 'Content-type': 'application/x-www-form-urlencoded' },

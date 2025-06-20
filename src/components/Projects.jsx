@@ -321,23 +321,38 @@ export default function Projects() {
 
             <div className="containerport">
               {projects.map(project => (
-                <div
-                  key={project.id}
-                  onClick={() => navigate(`/project?id=${project.id}`)}
-                >
-                  <img
-                    className='portimg'
-                    src={project.thumbnail}
-                    alt="thumbnail"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                    onClick={() => setSelectedImage(project)}
-                  />
-                </div>
+                // <div
+                //   key={project.id}
+                //   onClick={() => navigate(`/project?id=${project.id}`)}
+                // >
+                //   <img
+                //     className='portimg'
+                //     src={project.thumbnail}
+                //     alt="thumbnail"
+                //     data-toggle="modal"
+                //     data-target="#exampleModal"
+                //     onClick={() => setSelectedImage(project)}
+                //   />
+                // </div>
+<div
+  key={project.id}
+  className="project-card"
+  onClick={() => navigate(`/project?id=${project.id}`)}
+>
+  <div className="thumbnail-wrapper">
+    <img
+      className="portimg"
+      src={project.thumbnail}
+      alt={project.title}
+    />
+    <div className="overlay-title">
+      <span>{project.title}</span>
+    </div>
+  </div>
+</div>
               ))}
             </div>
-
-            {selectedImage && (
+     {selectedImage && (
               <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
                 <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                   <button className="close-btn" onClick={() => setSelectedImage(null)}>

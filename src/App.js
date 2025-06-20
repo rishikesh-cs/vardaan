@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import AdminPanel from './components/AdminPanel';
 import AdminLogin from './components/AdminLogin';
 import PrivateRoute from './components/PrivateRoute';
-// import AdminSignup from './components/AdminSignup';
+import AdminSignup from './components/AdminSignup';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Services from './components/Services';
@@ -26,7 +26,7 @@ function App() {
             {/* <Route path="/upload" element={<UploadForm />} /> */}
             {/* <Route path="/display" element={<DisplayImage />} /> */}
             <Route path="/login" element={<AdminLogin />} />
-            {/* <Route path="/signup" element={<AdminSignup />} /> */}
+            <Route path="/signup" element={<AdminSignup />} />
             <Route path="/admin" element={<PrivateRoute><AdminPanel /></PrivateRoute>} />
             {/* <Route path="/project/:projectId" element={<ProjectDetail />} /> */}
               <Route path='/project' element={<ProjectDetail />} />

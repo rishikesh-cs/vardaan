@@ -41,7 +41,7 @@ const AdminLogin = () => {
     return () => {
       document.body.removeChild(script);
     };
-  });
+  },[]);
   return (
     <>
 
